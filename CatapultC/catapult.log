@@ -1,0 +1,26 @@
+//  Catapult University Version 10.0a/269363 (Production Release) Wed Nov  9 17:38:00 PST 2016
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2016, All Rights Reserved.
+//                       UNPUBLISHED, LICENSED SOFTWARE.
+//            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//          PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux xph3sle509@ocaepc56 3.16.0-4-amd64 #1 SMP Debian 3.16.43-2+deb8u2 (2017-06-26) x86_64
+//  
+//  Package information: SIFLIBS v23.0_1.0, HLS_PKGS v23.0_1.0, 
+//                       DesignPad v2.78_1.0
+//  
+//  This version may only be used for academic purposes.  Some optimizations 
+//  are disabled, so results obtained from this version may be sub-optimal.
+//  
+//  Start time Thu Dec 21 10:35:29 2017
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log43827828222e.0"
+# Moving session transcript to file "/tp-fmr/sle3_509/Code/CatapultC/catapult.log"
+# Warning: No Encrypted Liberty technology libraries have been specified (LIB-192)
+# Warning: No Liberty technology libraries have been specified (LIB-192)
+# Warning: No Synopsys DB technology libraries have been specified (LIB-192)
+# File '$PROJECT_HOME/../../3D_mono_camera/conv.cpp' saved
+# File '$PROJECT_HOME/../../3D_mono_camera/conv.cpp' saved
+quit -f
+// Finish time Thu Dec 21 10:58:22 2017, time elapsed 22:53, peak memory 1.12GB, exit status 0
