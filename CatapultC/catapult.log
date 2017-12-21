@@ -13,14 +13,12 @@
 //  This version may only be used for academic purposes.  Some optimizations 
 //  are disabled, so results obtained from this version may be sub-optimal.
 //  
-//  Start time Thu Dec 21 10:35:29 2017
+//  Start time Thu Dec 21 11:26:35 2017
 # -------------------------------------------------
-# Logging session transcript to file "/tmp/log43827828222e.0"
-# Moving session transcript to file "/tp-fmr/sle3_509/Code/CatapultC/catapult.log"
+# Logging session transcript to file "/tmp/log4977302821a1.0"
+# Moving session transcript to file "/tp-fmr/sle3_509/3D_mono_camera/CatapultC/catapult.log"
 # Warning: No Encrypted Liberty technology libraries have been specified (LIB-192)
 # Warning: No Liberty technology libraries have been specified (LIB-192)
 # Warning: No Synopsys DB technology libraries have been specified (LIB-192)
-# File '$PROJECT_HOME/../../3D_mono_camera/conv.cpp' saved
-# File '$PROJECT_HOME/../../3D_mono_camera/conv.cpp' saved
 quit -f
-// Finish time Thu Dec 21 10:58:22 2017, time elapsed 22:53, peak memory 1.12GB, exit status 0
+// Finish time Thu Dec 21 11:29:16 2017, time elapsed 2:41, peak memory 1.18GB, exit status 0
