@@ -1,0 +1,13 @@
+
+# Messages from "go analyze"
+
+Completed transformation 'analyze' on solution 'solution.v2': elapsed time 0.38 seconds, memory usage 1320544kB, peak memory usage 1385980kB (SOL-9)
+Branching solution 'solution.v2' at state 'new' (PRJ-2)
+File '$PROJECT_HOME/3D_mono_camera/conv.cpp' saved
+Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+Front End called with arguments: -- /tp-fmr/sle3_509/3D_mono_camera/conv.cpp (CIN-69)
+Edison Design Group C++/C Front End - Version 4.10.1 (CIN-1)
+Source file analysis completed (CIN-68)
+
+# Messages from "go new"
+

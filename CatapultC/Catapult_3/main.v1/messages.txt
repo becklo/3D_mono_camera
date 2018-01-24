@@ -1,0 +1,95 @@
+
+# Messages from "go assembly"
+
+Completed transformation 'assembly' on solution 'main.v1': elapsed time 0.14 seconds, memory usage 1314276kB, peak memory usage 1379812kB (SOL-9)
+Completed transformation 'libraries' on solution 'main.v1': elapsed time 0.09 seconds, memory usage 1314276kB, peak memory usage 1379812kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 50 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 25 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+Starting transformation 'assembly' on solution 'main.v1' (SOL-8)
+Optimizing partition '/main': (Total ops = 118, Real ops = 47, Vars = 24) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 118, Real ops = 47, Vars = 15) (SOL-10)
+
+# Messages from "go libraries"
+
+Completed transformation 'compile' on solution 'main.v1': elapsed time 0.99 seconds, memory usage 1314276kB, peak memory usage 1379812kB (SOL-9)
+8.3
+Starting transformation 'libraries' on solution 'main.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/xilinx/mgc_Xilinx-KINTEX-7-3_beh_xv.lib' [mgc_Xilinx-KINTEX-7-3_beh_xv]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_accel_vivado.lib' [Xilinx_accel]... (LIB-49)
+No Encrypted Liberty technology libraries have been specified (LIB-192)
+No Liberty technology libraries have been specified (LIB-192)
+No Synopsys DB technology libraries have been specified (LIB-192)
+
+# Messages from "go compile"
+
+Completed transformation 'analyze' on solution 'solution.v1': elapsed time 0.36 seconds, memory usage 1314276kB, peak memory usage 1314276kB (SOL-9)
+/DESIGN_HIERARCHY main
+Saving project file '/tp-fmr/sle3_509/Catapult_3.ccs'. (PRJ-5)
+Starting transformation 'compile' on solution 'solution.v1' (SOL-8)
+Generating synthesis internal form... (CIN-3)
+Found top design routine 'main' specified by directive (CIN-52)
+Synthesizing routine 'main' (CIN-13)
+Inlining routine 'main' (CIN-14)
+Inlining routine 'reconstruction_error' (CIN-14)
+Optimizing block '/main' ... (CIN-4)
+Inout port 'image_net' is only used as an input. (OPT-10)
+Inout port 'image_floue' is only used as an input. (OPT-10)
+Inout port 'depth' is only used as an output. (OPT-11)
+Optimizing partition '/main': (Total ops = 144, Real ops = 60, Vars = 49) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 144, Real ops = 60, Vars = 42) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 138, Real ops = 57, Vars = 42) (SOL-10)
+Optimizing partition '/main': (Total ops = 138, Real ops = 57, Vars = 49) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 117, Real ops = 57, Vars = 28) (SOL-10)
+Optimizing partition '/main': (Total ops = 117, Real ops = 57, Vars = 35) (SOL-10)
+Splitting object 'for:for:if:acc.tdx' into 2 segments (OPT-19)
+Splitting object 'pref' into 2 segments (OPT-19)
+Splitting object 'for:for:else:acc.tdx' into 2 segments (OPT-19)
+Splitting object 'pref#1' into 2 segments (OPT-19)
+Splitting object 'for:for:else:acc.tdx#1' into 2 segments (OPT-19)
+Splitting object 'for:for:else:acc.tdx#2' into 2 segments (OPT-19)
+Splitting object 'for#1:for:acc.tdx' into 2 segments (OPT-19)
+Splitting object 'pref#4' into 2 segments (OPT-19)
+Splitting object 'reconstruction_error:for:for:acc.tdx' into 2 segments (OPT-19)
+Splitting object 'reconstruction_error:for:for:acc.tdx#1' into 2 segments (OPT-19)
+Optimizing partition '/main/core': (Total ops = 110, Real ops = 51, Vars = 38) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 123, Real ops = 51, Vars = 14) (SOL-10)
+Optimizing partition '/main': (Total ops = 123, Real ops = 51, Vars = 21) (SOL-10)
+Optimizing partition '/main': (Total ops = 122, Real ops = 51, Vars = 21) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 122, Real ops = 51, Vars = 14) (SOL-10)
+Loop '/main/core/for:for' iterated at most 316 times. (LOOP-2)
+Loop '/main/core/for' iterated at most 216 times. (LOOP-2)
+Loop '/main/core/for#1:for' iterated at most 300 times. (LOOP-2)
+Loop '/main/core/for#1' iterated at most 200 times. (LOOP-2)
+Optimizing partition '/main/core': (Total ops = 152, Real ops = 46, Vars = 15) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 128, Real ops = 46, Vars = 15) (SOL-10)
+Optimizing partition '/main': (Total ops = 127, Real ops = 46, Vars = 22) (SOL-10)
+Splitting object 'for:i' into 2 segments (OPT-19)
+Splitting object 'for:for:j' into 2 segments (OPT-19)
+Splitting object 'for#1:i' into 2 segments (OPT-19)
+Splitting object 'for#1:for:j' into 2 segments (OPT-19)
+Optimizing partition '/main/core': (Total ops = 119, Real ops = 46, Vars = 19) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 117, Real ops = 46, Vars = 15) (SOL-10)
+Optimizing partition '/main': (Total ops = 117, Real ops = 46, Vars = 22) (SOL-10)
+Design 'main' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+
+# Messages from "go analyze"
+
+8.0a
+/INPUTFILES/1
+/INPUTFILES/2
+/INPUTFILES/3
+/INPUTFILES/4
+100000
+Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Moving session transcript to file "/tp-fmr/sle3_509/catapult.log"
+Front End called with arguments: -- /tp-fmr/sle3_509/3D_mono_camera/main.cpp (CIN-69)
+Edison Design Group C++/C Front End - Version 4.10.1 (CIN-1)
+Source file analysis completed (CIN-68)
+
+# Messages from "go new"
+

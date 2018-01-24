@@ -1,0 +1,15 @@
+
+# Messages from "go analyze"
+
+Completed transformation 'analyze' on solution 'solution.v1': elapsed time 0.54 seconds, memory usage 1388008kB, peak memory usage 1388008kB (SOL-9)
+/INPUTFILES/1
+Launching web browser to open http://localhost:57775 ...
+8.0a
+Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Moving session transcript to file "/tp-fmr/sle3_509/catapult.log"
+Front End called with arguments: -- /tp-fmr/sle3_509/3D_mono_camera/conv.cpp (CIN-69)
+Edison Design Group C++/C Front End - Version 4.10.1 (CIN-1)
+Source file analysis completed (CIN-68)
+
+# Messages from "go new"
+

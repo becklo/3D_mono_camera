@@ -1,0 +1,3 @@
+/softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_out_stdreg_v1.v
+/softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_io_sync_v1.v
+./rtl.v

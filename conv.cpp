@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdio.h>
+#include <stdint.h>
 
 int kCols = 17;
 int kRows = 17;
@@ -9,7 +10,7 @@ int kCenterX = kCols / 2;
 int kCenterY = kRows / 2;
 
 
-void conv(int image[1694][1107], int rows, int cols, double kernel[17][17], double sortie[1694+16][1107+16]){
+void conv(int image[300][200], int rows, int cols, int kernel[17][17], long sortie[300+16][200+16]){
   int mm,nn,ii,jj;
   for(int i=0; i < rows; ++i){              // rows
       for(int j=0; j < cols; ++j){          // columns

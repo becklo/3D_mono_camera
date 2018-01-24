@@ -1,0 +1,240 @@
+
+# Messages from "go extract"
+
+Completed transformation 'extract' on solution 'conv.v1': elapsed time 1.43 seconds, memory usage 1383368kB, peak memory usage 1385980kB (SOL-9)
+Completed transformation 'instance' on solution 'conv.v1': elapsed time 0.23 seconds, memory usage 1318860kB, peak memory usage 1385980kB (SOL-9)
+Starting transformation 'extract' on solution 'conv.v1' (SOL-8)
+Optimizing partition '/conv': (Total ops = 305, Real ops = 80, Vars = 100) (SOL-10)
+Optimizing partition '/conv/conv:core/conv:core_core:fsm': (Total ops = 14, Real ops = 2, Vars = 10) (SOL-10)
+Optimizing partition '/conv/conv:core/conv:core_core:fsm/conv:core_core:fsm': (Total ops = 13, Real ops = 1, Vars = 1) (SOL-10)
+Optimizing partition '/conv': (Total ops = 305, Real ops = 80, Vars = 92) (SOL-10)
+Optimizing partition '/conv': (Total ops = 290, Real ops = 85, Vars = 92) (SOL-10)
+Report written to file 'rtl.rpt'
+Netlist written to file 'rtl.vhdl' (NET-4)
+generate concat
+order file name is: rtl.vhdl_order.txt
+Add dependent file: /softl3/catapultc10_0a/64bit/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_ioport_comps_v11.vhd
+Add dependent file: /softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_in_wire_v1.vhd
+Add dependent file: /softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_io_sync_v1.vhd
+Add dependent file: ./rtl.vhdl
+Finished writing concatenated file: /tp-fmr/sle3_509/Catapult_5/conv.v1/concat_rtl.vhdl
+order file name is: rtl.vhdl_order_sim.txt
+Finished writing concatenated simulation file: /tp-fmr/sle3_509/Catapult_5/conv.v1/concat_sim_rtl.vhdl
+Synthesis script written to file 'rtl.vhdl.psr'
+Synthesis script written to file 'concat_rtl.vhdl.psr'
+Netlist written to file 'rtl.v' (NET-4)
+order file name is: rtl.v_order.txt
+Add dependent file: /softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_in_wire_v1.v
+Add dependent file: /softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_io_sync_v1.v
+Add dependent file: ./rtl.v
+Finished writing concatenated file: /tp-fmr/sle3_509/Catapult_5/conv.v1/concat_rtl.v
+order file name is: rtl.v_order_sim.txt
+Finished writing concatenated simulation file: /tp-fmr/sle3_509/Catapult_5/conv.v1/concat_sim_rtl.v
+Synthesis script written to file 'rtl.v.psr'
+Synthesis script written to file 'concat_rtl.v.psr'
+Completed transformation 'dpfsm' on solution 'conv.v1': elapsed time 0.37 seconds, memory usage 1318860kB, peak memory usage 1385980kB (SOL-9)
+Starting transformation 'instance' on solution 'conv.v1' (SOL-8)
+Reassigned operation for:for:for:for:acc#17:mgc_add_pipe(1,1,2,0,2,1,0,0,1,0,2,0,0,0) to mgc_add(2,0,1,1,2) (ASG-1)
+Reassigned operation for:for:for:for:acc#16:mgc_add_pipe(1,1,2,0,3,1,0,0,1,0,2,0,0,0) to mgc_add(2,0,1,1,3) (ASG-1)
+Shared Operations for:for:for:for:acc,for:for:for:acc on resource for:for:for:acc:rg:mgc_add(6,0,5,0,6) (ASG-3)
+Shared Operations for:acc,for:for:acc,for:for:for:for:aif#2:acc,for:for:for:for:if:for:for:for:for:if:acc#3 on resource for:acc:rg:mgc_add(32,1,32,1,33) (ASG-3)
+Shared Operations for:acc#2,for:acc#1,for:for:acc#2,for:for:acc#1 on resource for:acc#1:rg:mgc_add(32,1,2,1,33) (ASG-3)
+Shared Operations for:for:for:acc#3,for:for:for:for:acc#8 on resource for:for:for:acc#3:rg:mgc_add(5,0,4,1,6) (ASG-3)
+Shared Operations for:for:for:for:if:mul,for:for:for:for:if:mul#1,for:for:for:for:if:mul#3 on resource for:for:for:for:if:mul:rg:mgc_mul(32,0,32,0,32) (ASG-3)
+Optimizing partition '/conv': (Total ops = 346, Real ops = 96, Vars = 274) (SOL-10)
+Optimizing partition '/conv/conv:core/conv:core_core:fsm': (Total ops = 14, Real ops = 2, Vars = 10) (SOL-10)
+Optimizing partition '/conv/conv:core/conv:core_core:fsm/conv:core_core:fsm': (Total ops = 13, Real ops = 1, Vars = 1) (SOL-10)
+Optimizing partition '/conv': (Total ops = 339, Real ops = 88, Vars = 104) (SOL-10)
+Optimizing partition '/conv': (Total ops = 306, Real ops = 81, Vars = 94) (SOL-10)
+Optimizing partition '/conv': (Total ops = 305, Real ops = 80, Vars = 92) (SOL-10)
+Netlist written to file 'schematic.nlv' (NET-4)
+
+# Messages from "go dpfsm"
+
+Completed transformation 'schedule' on solution 'conv.v1': elapsed time 1.37 seconds, memory usage 1318860kB, peak memory usage 1385980kB (SOL-9)
+Starting transformation 'dpfsm' on solution 'conv.v1' (SOL-8)
+Performing FSM extraction... (FSM-1)
+Optimizing partition '/conv': (Total ops = 511, Real ops = 200, Vars = 376) (SOL-10)
+Optimizing partition '/conv/conv:core/conv:core_core:fsm': (Total ops = 14, Real ops = 2, Vars = 10) (SOL-10)
+Optimizing partition '/conv/conv:core/conv:core_core:fsm/conv:core_core:fsm': (Total ops = 13, Real ops = 1, Vars = 1) (SOL-10)
+Optimizing partition '/conv': (Total ops = 324, Real ops = 122, Vars = 111) (SOL-10)
+Optimizing partition '/conv': (Total ops = 312, Real ops = 109, Vars = 102) (SOL-10)
+Optimizing partition '/conv': (Total ops = 303, Real ops = 108, Vars = 103) (SOL-10)
+Optimizing partition '/conv': (Total ops = 303, Real ops = 108, Vars = 101) (SOL-10)
+Optimizing partition '/conv': (Total ops = 302, Real ops = 108, Vars = 101) (SOL-10)
+Optimizing partition '/conv': (Total ops = 307, Real ops = 100, Vars = 114) (SOL-10)
+Optimizing partition '/conv': (Total ops = 295, Real ops = 99, Vars = 101) (SOL-10)
+Optimizing partition '/conv': (Total ops = 292, Real ops = 99, Vars = 96) (SOL-10)
+
+# Messages from "go schedule"
+
+Completed transformation 'allocate' on solution 'conv.v1': elapsed time 0.16 seconds, memory usage 1320544kB, peak memory usage 1385980kB (SOL-9)
+Starting transformation 'schedule' on solution 'conv.v1' (SOL-8)
+Performing concurrent resource allocation and scheduling on '/conv/core' (CRAAS-1)
+Global signal 'image:rsc.data_out' added to design 'conv' for component 'image:rsci' (LIB-3)
+Global signal 'image:rsc.re' added to design 'conv' for component 'image:rsci' (LIB-3)
+Global signal 'image:rsc.addr' added to design 'conv' for component 'image:rsci' (LIB-3)
+Global signal 'rows:rsc.z' added to design 'conv' for component 'rows:rsci' (LIB-3)
+Global signal 'cols:rsc.z' added to design 'conv' for component 'cols:rsci' (LIB-3)
+Global signal 'kernel:rsc.data_out' added to design 'conv' for component 'kernel:rsci' (LIB-3)
+Global signal 'kernel:rsc.re' added to design 'conv' for component 'kernel:rsci' (LIB-3)
+Global signal 'kernel:rsc.addr' added to design 'conv' for component 'kernel:rsci' (LIB-3)
+Global signal 'sortie:rsc.data_out' added to design 'conv' for component 'sortie:rsci' (LIB-3)
+Global signal 'sortie:rsc.we' added to design 'conv' for component 'sortie:rsci' (LIB-3)
+Global signal 'sortie:rsc.re' added to design 'conv' for component 'sortie:rsci' (LIB-3)
+Global signal 'sortie:rsc.addr' added to design 'conv' for component 'sortie:rsci' (LIB-3)
+Global signal 'sortie:rsc.data_in' added to design 'conv' for component 'sortie:rsci' (LIB-3)
+Global signal 'image:rsc.triosy.lz' added to design 'conv' for component 'image:rsc.triosy:obj' (LIB-3)
+Global signal 'rows:rsc.triosy.lz' added to design 'conv' for component 'rows:rsc.triosy:obj' (LIB-3)
+Global signal 'cols:rsc.triosy.lz' added to design 'conv' for component 'cols:rsc.triosy:obj' (LIB-3)
+Global signal 'kernel:rsc.triosy.lz' added to design 'conv' for component 'kernel:rsc.triosy:obj' (LIB-3)
+Global signal 'sortie:rsc.triosy.lz' added to design 'conv' for component 'sortie:rsc.triosy:obj' (LIB-3)
+Optimizing partition '/conv': (Total ops = 377, Real ops = 52, Vars = 96) (SOL-10)
+Optimizing partition '/conv/conv:core/core': (Total ops = 281, Real ops = 49, Vars = 32) (SOL-10)
+Optimizing partition '/conv/conv:core/core': (Total ops = 260, Real ops = 45, Vars = 26) (SOL-10)
+Optimizing partition '/conv/conv:core/core': (Total ops = 259, Real ops = 45, Vars = 26) (SOL-10)
+Optimizing partition '/conv': (Total ops = 355, Real ops = 48, Vars = 84) (SOL-10)
+Optimizing partition '/conv': (Total ops = 349, Real ops = 48, Vars = 84) (SOL-10)
+Report written to file 'cycle.rpt'
+
+# Messages from "go allocate"
+
+Extrapolation detected. Script '/tp-fmr/sle3_509/Catapult_5/conv.v1/adjust_char_library.tcl' generated. (LIB-142)
+Completed transformation 'architect' on solution 'conv.v1': elapsed time 0.21 seconds, memory usage 1320544kB, peak memory usage 1385980kB (SOL-9)
+Starting transformation 'allocate' on solution 'conv.v1' (SOL-8)
+Performing concurrent resource allocation and scheduling on '/conv/core' (CRAAS-1)
+Select qualified components for data operations ... (CRAAS-3)
+Apply resource constraints on data operations ... (CRAAS-4)
+Prescheduled LOOP '/conv/core/for:for:for:for' (3 c-steps) (SCHD-7)
+Prescheduled LOOP '/conv/core/for:for:for' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/conv/core/for:for' (1 c-steps) (SCHD-7)
+Prescheduled LOOP '/conv/core/for' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/conv/core/main' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/conv/core/core:rlp' (0 c-steps) (SCHD-7)
+Prescheduled SEQUENTIAL '/conv/core' (total length 906 c-steps) (SCHD-8)
+Initial schedule of SEQUENTIAL '/conv/core': Latency = 900, Area (Datapath, Register, Total) = 3761.00, 0.00, 3761.00 (CRAAS-11)
+At least one feasible schedule exists. (CRAAS-9)
+Optimized LOOP '/conv/core/for:for:for:for': Latency = 900, Area (Datapath, Register, Total) = 3069.00, 0.00, 3069.00 (CRAAS-10)
+Optimized LOOP '/conv/core/for:for:for:for': Latency = 1189, Area (Datapath, Register, Total) = 2377.00, 0.00, 2377.00 (CRAAS-10)
+Final schedule of SEQUENTIAL '/conv/core': Latency = 1189, Area (Datapath, Register, Total) = 2377.00, 0.00, 2377.00 (CRAAS-12)
+Resource allocation and scheduling done. (CRAAS-2)
+Netlist written to file 'schedule.gnt' (NET-4)
+
+# Messages from "go architect"
+
+Completed transformation 'cluster' on solution 'conv.v1': elapsed time 0.02 seconds, memory usage 1320544kB, peak memory usage 1385980kB (SOL-9)
+Starting transformation 'architect' on solution 'conv.v1' (SOL-8)
+Optimizing partition '/conv/core': (Total ops = 295, Real ops = 45, Vars = 135) (SOL-10)
+Optimizing partition '/conv/core': (Total ops = 91, Real ops = 42, Vars = 20) (SOL-10)
+Optimizing partition '/conv/core': (Total ops = 90, Real ops = 41, Vars = 19) (SOL-10)
+Design 'conv' contains '45' real operations. (SOL-11)
+Completed transformation 'memories' on solution 'conv.v1': elapsed time 0.08 seconds, memory usage 1320544kB, peak memory usage 1385980kB (SOL-9)
+Starting transformation 'cluster' on solution 'conv.v1' (SOL-8)
+Completed transformation 'loops' on solution 'conv.v1': elapsed time 0.02 seconds, memory usage 1320544kB, peak memory usage 1385980kB (SOL-9)
+Starting transformation 'memories' on solution 'conv.v1' (SOL-8)
+Memory Resource '/conv/image:rsc' (from var: image) mapped to 'ram_Xilinx-ARTIX-7-3_RAMSB.singleport' (size: 60000 x 32). (MEM-4)
+I/O-Port Resource '/conv/rows:rsc' (from var: rows) mapped to 'mgc_ioport.mgc_in_wire' (size: 32). (MEM-2)
+I/O-Port Resource '/conv/cols:rsc' (from var: cols) mapped to 'mgc_ioport.mgc_in_wire' (size: 32). (MEM-2)
+Memory Resource '/conv/kernel:rsc' (from var: kernel) mapped to 'ram_Xilinx-ARTIX-7-3_RAMSB.singleport' (size: 289 x 32). (MEM-4)
+Memory Resource '/conv/sortie:rsc' (from var: sortie) mapped to 'ram_Xilinx-ARTIX-7-3_RAMSB.singleport' (size: 68256 x 32). (MEM-4)
+Optimizing partition '/conv': (Total ops = 77, Real ops = 32, Vars = 25) (SOL-10)
+Optimizing partition '/conv/core': (Total ops = 77, Real ops = 32, Vars = 13) (SOL-10)
+Optimizing partition '/conv/core': (Total ops = 75, Real ops = 32, Vars = 13) (SOL-10)
+Optimizing partition '/conv': (Total ops = 75, Real ops = 32, Vars = 25) (SOL-10)
+Completed transformation 'assembly' on solution 'conv.v1': elapsed time 0.08 seconds, memory usage 1320544kB, peak memory usage 1385980kB (SOL-9)
+Starting transformation 'loops' on solution 'conv.v1' (SOL-8)
+Optimizing partition '/conv/core': (Total ops = 75, Real ops = 32, Vars = 13) (SOL-10)
+Loop '/conv/core/for:for:for:for' is left rolled. (LOOP-4)
+Loop '/conv/core/for:for:for' is left rolled. (LOOP-4)
+Loop '/conv/core/for:for' is left rolled. (LOOP-4)
+Loop '/conv/core/for' is left rolled. (LOOP-4)
+Loop '/conv/core/main' is left rolled. (LOOP-4)
+
+# Messages from "go assembly"
+
+Completed transformation 'libraries' on solution 'conv.v1': elapsed time 0.07 seconds, memory usage 1320544kB, peak memory usage 1385980kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 50 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 25 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+Starting transformation 'assembly' on solution 'conv.v1' (SOL-8)
+Optimizing partition '/conv': (Total ops = 70, Real ops = 32, Vars = 20) (SOL-10)
+Optimizing partition '/conv/core': (Total ops = 70, Real ops = 32, Vars = 13) (SOL-10)
+
+# Messages from "go libraries"
+
+Completed transformation 'compile' on solution 'conv.v1': elapsed time 0.47 seconds, memory usage 1320544kB, peak memory usage 1385980kB (SOL-9)
+Starting transformation 'libraries' on solution 'conv.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/psr2014a/mgc_Xilinx-ARTIX-7-3_beh_psr.lib' [mgc_Xilinx-ARTIX-7-3_beh_psr]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/psr2014a/ram_Xilinx-ARTIX-7-3_RAMSB.lib' [ram_Xilinx-ARTIX-7-3_RAMSB]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_accel_psr.lib' [Xilinx_accel]... (LIB-49)
+No Encrypted Liberty technology libraries have been specified (LIB-192)
+No Liberty technology libraries have been specified (LIB-192)
+No Synopsys DB technology libraries have been specified (LIB-192)
+
+# Messages from "go compile"
+
+Completed transformation 'analyze' on solution 'solution.v3': elapsed time 0.36 seconds, memory usage 1320544kB, peak memory usage 1385980kB (SOL-9)
+Starting transformation 'compile' on solution 'solution.v3' (SOL-8)
+Generating synthesis internal form... (CIN-3)
+Found top design routine 'conv' specified by directive (CIN-52)
+Synthesizing routine 'conv' (CIN-13)
+Inlining routine 'conv' (CIN-14)
+Instantiating global variable 'kRows' which may be accessed outside this scope (CIN-18)
+Optimizing partition '/conv/kRows:init': (Total ops = 2, Real ops = 0, Vars = 0) (SOL-10)
+Optimizing partition '/conv/kRows:init': (Total ops = 1, Real ops = 0, Vars = 0) (SOL-10)
+Instantiating global variable 'kCols' which may be accessed outside this scope (CIN-18)
+Optimizing partition '/conv/kCols:init': (Total ops = 2, Real ops = 0, Vars = 0) (SOL-10)
+Optimizing partition '/conv/kCols:init': (Total ops = 1, Real ops = 0, Vars = 0) (SOL-10)
+Instantiating global variable 'kCenterY' which may be accessed outside this scope (CIN-18)
+Optimizing partition '/conv/kCenterY:init': (Total ops = 2, Real ops = 1, Vars = 0) (SOL-10)
+Optimizing partition '/conv/kCenterY:init': (Total ops = 1, Real ops = 1, Vars = 0) (SOL-10)
+Optimizing partition '/conv/kCenterY:init': (Total ops = 6, Real ops = 2, Vars = 0) (SOL-10)
+Instantiating global variable 'kCenterX' which may be accessed outside this scope (CIN-18)
+Optimizing partition '/conv/kCenterX:init': (Total ops = 2, Real ops = 1, Vars = 0) (SOL-10)
+Optimizing partition '/conv/kCenterX:init': (Total ops = 1, Real ops = 1, Vars = 0) (SOL-10)
+Optimizing partition '/conv/kCenterX:init': (Total ops = 6, Real ops = 2, Vars = 0) (SOL-10)
+Optimizing block '/conv' ... (CIN-4)
+Inout port 'image' is only used as an input. (OPT-10)
+Inout port 'kernel' is only used as an input. (OPT-10)
+Optimizing partition '/conv': (Total ops = 98, Real ops = 47, Vars = 37) (SOL-10)
+Optimizing partition '/conv/core': (Total ops = 98, Real ops = 47, Vars = 32) (SOL-10)
+Optimizing partition '/conv/core': (Total ops = 82, Real ops = 46, Vars = 21) (SOL-10)
+Optimizing partition '/conv': (Total ops = 82, Real ops = 46, Vars = 26) (SOL-10)
+Splitting object 'nn' into 2 segments (OPT-19)
+Splitting object 'for:for:for:for:if:acc.tdx' into 2 segments (OPT-19)
+Splitting object 'pref' into 2 segments (OPT-19)
+Splitting object 'for:for:for:for:if:acc.tdx#1' into 2 segments (OPT-19)
+Splitting object 'for:for:for:for:if:acc.tdx#2' into 2 segments (OPT-19)
+Optimizing partition '/conv/core': (Total ops = 78, Real ops = 42, Vars = 26) (SOL-10)
+Optimizing partition '/conv/core': (Total ops = 66, Real ops = 31, Vars = 13) (SOL-10)
+Optimizing partition '/conv': (Total ops = 66, Real ops = 31, Vars = 18) (SOL-10)
+Splitting object 'mm' into 2 segments (OPT-19)
+Optimizing partition '/conv/core': (Total ops = 67, Real ops = 31, Vars = 14) (SOL-10)
+Optimizing partition '/conv/core': (Total ops = 67, Real ops = 31, Vars = 13) (SOL-10)
+Optimizing partition '/conv': (Total ops = 67, Real ops = 31, Vars = 18) (SOL-10)
+Loop '/conv/core/for:for:for:for' iterated at most 17 times. (LOOP-2)
+Loop '/conv/core/for:for:for' iterated at most 17 times. (LOOP-2)
+Optimizing partition '/conv/core': (Total ops = 84, Real ops = 31, Vars = 13) (SOL-10)
+Optimizing partition '/conv/core': (Total ops = 75, Real ops = 31, Vars = 13) (SOL-10)
+Optimizing partition '/conv': (Total ops = 75, Real ops = 31, Vars = 18) (SOL-10)
+Splitting object 'for:for:for:m' into 2 segments (OPT-19)
+Splitting object 'for:for:for:for:n' into 2 segments (OPT-19)
+Optimizing partition '/conv/core': (Total ops = 71, Real ops = 31, Vars = 15) (SOL-10)
+Optimizing partition '/conv/core': (Total ops = 69, Real ops = 31, Vars = 13) (SOL-10)
+Optimizing partition '/conv': (Total ops = 69, Real ops = 31, Vars = 18) (SOL-10)
+Design 'conv' was read (SOL-1)
+
+# Messages from "go analyze"
+
+Branching solution 'solution.v3' at state 'new' (PRJ-2)
+Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
+Front End called with arguments: -- /tp-fmr/sle3_509/3D_mono_camera/conv.cpp (CIN-69)
+Edison Design Group C++/C Front End - Version 4.10.1 (CIN-1)
+Source file analysis completed (CIN-68)
+
+# Messages from "go new"
+

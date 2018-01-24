@@ -1,0 +1,271 @@
+
+# Messages from "go extract"
+
+Completed transformation 'extract' on solution 'main.v2': elapsed time 4.35 seconds, memory usage 1378880kB, peak memory usage 1378880kB (SOL-9)
+Completed transformation 'instance' on solution 'main.v2': elapsed time 0.32 seconds, memory usage 1313344kB, peak memory usage 1314300kB (SOL-9)
+Starting transformation 'extract' on solution 'main.v2' (SOL-8)
+Optimizing partition '/main': (Total ops = 483, Real ops = 137, Vars = 127) (SOL-10)
+Optimizing partition '/main/main:core/main:core_core:fsm': (Total ops = 17, Real ops = 2, Vars = 12) (SOL-10)
+Optimizing partition '/main/main:core/main:core_core:fsm/main:core_core:fsm': (Total ops = 16, Real ops = 1, Vars = 1) (SOL-10)
+Optimizing partition '/main': (Total ops = 483, Real ops = 137, Vars = 117) (SOL-10)
+Optimizing partition '/main': (Total ops = 483, Real ops = 137, Vars = 110) (SOL-10)
+Optimizing partition '/main': (Total ops = 451, Real ops = 146, Vars = 110) (SOL-10)
+Report written to file 'rtl.rpt'
+Netlist written to file 'rtl.vhdl' (NET-4)
+generate concat
+order file name is: rtl.vhdl_order.txt
+Add dependent file: /softl3/catapultc10_0a/64bit/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+Add dependent file: /softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_ioport_comps_v11.vhd
+Add dependent file: /softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_out_stdreg_v1.vhd
+Add dependent file: /softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_io_sync_v1.vhd
+Add dependent file: ./rtl.vhdl
+Finished writing concatenated file: /tp-fmr/sle3_509/Catapult_3/main.v2/concat_rtl.vhdl
+order file name is: rtl.vhdl_order_sim.txt
+Finished writing concatenated simulation file: /tp-fmr/sle3_509/Catapult_3/main.v2/concat_sim_rtl.vhdl
+Connecting [ENABLE] port of transactor resource image_net:rsc to constant signal EN_image_net_rsc_INST_en drive to 0 (=0)
+Connecting [ENABLE] port of transactor resource image_floue:rsc to constant signal EN_image_floue_rsc_INST_en drive to 0 (=0)
+Connecting [ENABLE] port of transactor resource image_error:rsc to constant signal EN_image_error_rsc_INST_en drive to 0 (=0)
+Connecting [ENABLE] port of transactor resource depth:rsc to constant signal EN_depth_rsc_INST_en drive to 0 (=0)
+Function argument mask appears to have been optimized away.
+Function argument filtre appears to have been optimized away.
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+Synthesis script written to file 'rtl.vhdl.psr'
+Synthesis script written to file 'concat_rtl.vhdl.psr'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Netlist written to file 'rtl.v' (NET-4)
+order file name is: rtl.v_order.txt
+Add dependent file: /softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_out_stdreg_v1.v
+Add dependent file: /softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_io_sync_v1.v
+Add dependent file: ./rtl.v
+Finished writing concatenated file: /tp-fmr/sle3_509/Catapult_3/main.v2/concat_rtl.v
+order file name is: rtl.v_order_sim.txt
+Finished writing concatenated simulation file: /tp-fmr/sle3_509/Catapult_3/main.v2/concat_sim_rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Synthesis script written to file 'rtl.v.psr'
+Synthesis script written to file 'concat_rtl.v.psr'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+Completed transformation 'dpfsm' on solution 'main.v2': elapsed time 0.41 seconds, memory usage 1313344kB, peak memory usage 1314300kB (SOL-9)
+Starting transformation 'instance' on solution 'main.v2' (SOL-8)
+Reassigned operation reconstruction_error:for:acc#6:mgc_add_pipe(1,1,6,0,7,1,0,0,1,0,2,0,0,0) to mgc_add(6,0,1,1,7) (ASG-1)
+Reassigned operation reconstruction_error:for:acc#7:DEFAULT to mgc_add(7,0,1,1,7) (ASG-1)
+Shared Operations reconstruction_error:for:for:mul,for:for:if:mul,reconstruction_error:for:for:mul#2,for#1:for:mul on resource for#1:for:mul:rg:mgc_mul(32,0,32,0,32) (ASG-3)
+Shared Operations for:for:else:acc#3,for#1:for:acc#5 on resource for#1:for:acc#5:rg:mgc_add(13,0,5,0,13) (ASG-3)
+Shared Operations for:for:acc,for#1:for:acc,reconstruction_error:for:for:acc#11 on resource for#1:for:acc:rg:mgc_add(8,0,7,0,8) (ASG-3)
+Shared Operations for:acc#1,for#1:acc#1 on resource for#1:acc#1:rg:mgc_add(8,0,2,1,8) (ASG-3)
+Shared Operations for:for:aelse:acc,reconstruction_error:for:acc#6 on resource for:for:aelse:acc:rg:mgc_add(6,0,1,1,7) (ASG-3)
+Shared Operations for:for:acc#2,for#1:for:acc#4 on resource for#1:for:acc#4:rg:mgc_add(9,0,2,1,9) (ASG-3)
+Shared Operations reconstruction_error:for:for:acc#4,for:for:else:for:for:else:acc#3 on resource for:for:else:for:for:else:acc#3:rg:mgc_add(32,0,32,0,32) (ASG-3)
+Shared Operations reconstruction_error:for:acc,reconstruction_error:for:for:acc,reconstruction_error:acc on resource reconstruction_error:acc:rg:mgc_add(32,1,10,1,33) (ASG-3)
+Shared Operations reconstruction_error:for:acc#2,reconstruction_error:for:for:acc#5 on resource reconstruction_error:for:acc#2:rg:mgc_add(32,0,2,1,32) (ASG-3)
+Shared Operations for:acc,for#1:acc on resource for#1:acc:rg:mgc_add(6,0,5,0,6) (ASG-3)
+Optimizing partition '/main': (Total ops = 505, Real ops = 140, Vars = 400) (SOL-10)
+Optimizing partition '/main/main:core/main:core_core:fsm': (Total ops = 17, Real ops = 2, Vars = 12) (SOL-10)
+Optimizing partition '/main/main:core/main:core_core:fsm/main:core_core:fsm': (Total ops = 16, Real ops = 1, Vars = 1) (SOL-10)
+Optimizing partition '/main': (Total ops = 516, Real ops = 132, Vars = 146) (SOL-10)
+Optimizing partition '/main': (Total ops = 496, Real ops = 137, Vars = 110) (SOL-10)
+Optimizing partition '/main': (Total ops = 487, Real ops = 137, Vars = 110) (SOL-10)
+Optimizing partition '/main': (Total ops = 483, Real ops = 137, Vars = 110) (SOL-10)
+Netlist written to file 'schematic.nlv' (NET-4)
+
+# Messages from "go dpfsm"
+
+Completed transformation 'schedule' on solution 'main.v2': elapsed time 2.22 seconds, memory usage 1313344kB, peak memory usage 1314300kB (SOL-9)
+Starting transformation 'dpfsm' on solution 'main.v2' (SOL-8)
+Performing FSM extraction... (FSM-1)
+Optimizing partition '/main': (Total ops = 697, Real ops = 263, Vars = 527) (SOL-10)
+Optimizing partition '/main/main:core/main:core_core:fsm': (Total ops = 17, Real ops = 2, Vars = 12) (SOL-10)
+Optimizing partition '/main/main:core/main:core_core:fsm/main:core_core:fsm': (Total ops = 16, Real ops = 1, Vars = 1) (SOL-10)
+Optimizing partition '/main': (Total ops = 453, Real ops = 177, Vars = 143) (SOL-10)
+Optimizing partition '/main': (Total ops = 451, Real ops = 159, Vars = 128) (SOL-10)
+Optimizing partition '/main': (Total ops = 442, Real ops = 158, Vars = 129) (SOL-10)
+Optimizing partition '/main': (Total ops = 442, Real ops = 158, Vars = 127) (SOL-10)
+Optimizing partition '/main': (Total ops = 441, Real ops = 158, Vars = 127) (SOL-10)
+Optimizing partition '/main': (Total ops = 447, Real ops = 147, Vars = 147) (SOL-10)
+Optimizing partition '/main': (Total ops = 431, Real ops = 144, Vars = 130) (SOL-10)
+Optimizing partition '/main': (Total ops = 427, Real ops = 144, Vars = 119) (SOL-10)
+
+# Messages from "go schedule"
+
+Completed transformation 'allocate' on solution 'main.v2': elapsed time 0.22 seconds, memory usage 1314300kB, peak memory usage 1314300kB (SOL-9)
+Starting transformation 'schedule' on solution 'main.v2' (SOL-8)
+Performing concurrent resource allocation and scheduling on '/main/core' (CRAAS-1)
+Global signal 'image_net:rsc.data_out' added to design 'main' for component 'image_net:rsci' (LIB-3)
+Global signal 'image_net:rsc.re' added to design 'main' for component 'image_net:rsci' (LIB-3)
+Global signal 'image_net:rsc.addr' added to design 'main' for component 'image_net:rsci' (LIB-3)
+Global signal 'image_floue:rsc.data_out' added to design 'main' for component 'image_floue:rsci' (LIB-3)
+Global signal 'image_floue:rsc.re' added to design 'main' for component 'image_floue:rsci' (LIB-3)
+Global signal 'image_floue:rsc.addr' added to design 'main' for component 'image_floue:rsci' (LIB-3)
+Global signal 'image_error:rsc.data_out' added to design 'main' for component 'image_error:rsci' (LIB-3)
+Global signal 'image_error:rsc.we' added to design 'main' for component 'image_error:rsci' (LIB-3)
+Global signal 'image_error:rsc.re' added to design 'main' for component 'image_error:rsci' (LIB-3)
+Global signal 'image_error:rsc.addr' added to design 'main' for component 'image_error:rsci' (LIB-3)
+Global signal 'image_error:rsc.data_in' added to design 'main' for component 'image_error:rsci' (LIB-3)
+Global signal 'depth:rsc.we' added to design 'main' for component 'depth:rsci' (LIB-3)
+Global signal 'depth:rsc.addr' added to design 'main' for component 'depth:rsci' (LIB-3)
+Global signal 'depth:rsc.data_in' added to design 'main' for component 'depth:rsci' (LIB-3)
+Global signal 'return:rsc.z' added to design 'main' for component 'return:rsci' (LIB-3)
+Global signal 'image_net:rsc.triosy.lz' added to design 'main' for component 'image_net:rsc.triosy:obj' (LIB-3)
+Global signal 'image_floue:rsc.triosy.lz' added to design 'main' for component 'image_floue:rsc.triosy:obj' (LIB-3)
+Global signal 'image_error:rsc.triosy.lz' added to design 'main' for component 'image_error:rsc.triosy:obj' (LIB-3)
+Global signal 'depth:rsc.triosy.lz' added to design 'main' for component 'depth:rsc.triosy:obj' (LIB-3)
+Global signal 'return:rsc.triosy.lz' added to design 'main' for component 'return:rsc.triosy:obj' (LIB-3)
+Optimizing partition '/main': (Total ops = 571, Real ops = 73, Vars = 113) (SOL-10)
+Splitting object 'reconstruction_error:for:for:c.sva' into 2 segments (OPT-19)
+Optimizing partition '/main/main:core/core': (Total ops = 456, Real ops = 69, Vars = 43) (SOL-10)
+Optimizing partition '/main/main:core/core': (Total ops = 406, Real ops = 65, Vars = 33) (SOL-10)
+Optimizing partition '/main': (Total ops = 523, Real ops = 69, Vars = 96) (SOL-10)
+Optimizing partition '/main': (Total ops = 513, Real ops = 69, Vars = 96) (SOL-10)
+Report written to file 'cycle.rpt'
+
+# Messages from "go allocate"
+
+Extrapolation detected. Script '/tp-fmr/sle3_509/Catapult_3/main.v2/adjust_char_library.tcl' generated. (LIB-142)
+Completed transformation 'architect' on solution 'main.v2': elapsed time 0.31 seconds, memory usage 1314300kB, peak memory usage 1314300kB (SOL-9)
+Starting transformation 'allocate' on solution 'main.v2' (SOL-8)
+Performing concurrent resource allocation and scheduling on '/main/core' (CRAAS-1)
+Select qualified components for data operations ... (CRAAS-3)
+Apply resource constraints on data operations ... (CRAAS-4)
+Prescheduled LOOP '/main/core/reconstruction_error:for:for' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/main/core/reconstruction_error:for' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/main/core/for#1:for' (3 c-steps) (SCHD-7)
+Prescheduled LOOP '/main/core/for:for' (3 c-steps) (SCHD-7)
+Prescheduled LOOP '/main/core/for#1' (1 c-steps) (SCHD-7)
+Prescheduled LOOP '/main/core/for' (1 c-steps) (SCHD-7)
+Prescheduled LOOP '/main/core/main' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/main/core/core:rlp' (0 c-steps) (SCHD-7)
+Prescheduled SEQUENTIAL '/main/core' (total length 625186 c-steps) (SCHD-8)
+Initial schedule of SEQUENTIAL '/main/core': Latency = 625184, Area (Datapath, Register, Total) = 4447.00, 0.00, 4447.00 (CRAAS-11)
+At least one feasible schedule exists. (CRAAS-9)
+Optimized LOOP '/main/core/reconstruction_error:for:for': Latency = 625184, Area (Datapath, Register, Total) = 3755.00, 0.00, 3755.00 (CRAAS-10)
+Optimized LOOP 'for:for': Latency = 693439, Area (Datapath, Register, Total) = 3063.00, 0.00, 3063.00 (CRAAS-10)
+Final schedule of SEQUENTIAL '/main/core': Latency = 625184, Area (Datapath, Register, Total) = 3063.00, 0.00, 3063.00 (CRAAS-12)
+Resource allocation and scheduling done. (CRAAS-2)
+Netlist written to file 'schedule.gnt' (NET-4)
+
+# Messages from "go architect"
+
+Completed transformation 'cluster' on solution 'main.v2': elapsed time 0.02 seconds, memory usage 1314300kB, peak memory usage 1314300kB (SOL-9)
+Starting transformation 'architect' on solution 'main.v2' (SOL-8)
+Optimizing partition '/main/core': (Total ops = 373, Real ops = 63, Vars = 153) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 147, Real ops = 59, Vars = 29) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 147, Real ops = 59, Vars = 28) (SOL-10)
+Design 'main' contains '63' real operations. (SOL-11)
+Completed transformation 'memories' on solution 'main.v2': elapsed time 0.25 seconds, memory usage 1314300kB, peak memory usage 1314300kB (SOL-9)
+Starting transformation 'cluster' on solution 'main.v2' (SOL-8)
+Completed transformation 'loops' on solution 'main.v2': elapsed time 0.04 seconds, memory usage 1314300kB, peak memory usage 1314300kB (SOL-9)
+Starting transformation 'memories' on solution 'main.v2' (SOL-8)
+I/O-Port Resource '/main/mask:rsc' (from var: mask) mapped to 'mgc_ioport.mgc_in_wire' (size: 2184192). (MEM-2)
+I/O-Port Resource '/main/filtre:rsc' (from var: filtre) mapped to 'mgc_ioport.mgc_in_wire' (size: 606900). (MEM-2)
+Memory Resource '/main/image_net:rsc' (from var: image_net) mapped to 'ram_Xilinx-KINTEX-7-3_RAMSB.singleport' (size: 60000 x 32). (MEM-4)
+Memory Resource '/main/image_floue:rsc' (from var: image_floue) mapped to 'ram_Xilinx-KINTEX-7-3_RAMSB.singleport' (size: 60000 x 32). (MEM-4)
+Memory Resource '/main/image_error:rsc' (from var: image_error) mapped to 'ram_Xilinx-KINTEX-7-3_RAMSB.singleport' (size: 68256 x 32). (MEM-4)
+Memory Resource '/main/depth:rsc' (from var: depth) mapped to 'ram_Xilinx-KINTEX-7-3_RAMSB.singleport' (size: 60000 x 32). (MEM-4)
+I/O-Port Resource '/main/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_stdreg' (size: 32). (MEM-2)
+Optimizing partition '/main': (Total ops = 124, Real ops = 47, Vars = 29) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 124, Real ops = 47, Vars = 15) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 123, Real ops = 47, Vars = 15) (SOL-10)
+Optimizing partition '/main': (Total ops = 123, Real ops = 47, Vars = 29) (SOL-10)
+Completed transformation 'assembly' on solution 'main.v2': elapsed time 0.14 seconds, memory usage 1314300kB, peak memory usage 1314300kB (SOL-9)
+Starting transformation 'loops' on solution 'main.v2' (SOL-8)
+Optimizing partition '/main/core': (Total ops = 123, Real ops = 47, Vars = 15) (SOL-10)
+Loop '/main/core/for:for' is left rolled. (LOOP-4)
+Loop '/main/core/for' is left rolled. (LOOP-4)
+Loop '/main/core/reconstruction_error:for:for' is left rolled. (LOOP-4)
+Loop '/main/core/reconstruction_error:for' is left rolled. (LOOP-4)
+Loop '/main/core/for#1:for' is left rolled. (LOOP-4)
+Loop '/main/core/for#1' is left rolled. (LOOP-4)
+Loop '/main/core/main' is left rolled. (LOOP-4)
+
+# Messages from "go assembly"
+
+Completed transformation 'libraries' on solution 'main.v2': elapsed time 0.10 seconds, memory usage 1314300kB, peak memory usage 1314300kB (SOL-9)
+Starting transformation 'assembly' on solution 'main.v2' (SOL-8)
+Optimizing partition '/main': (Total ops = 118, Real ops = 47, Vars = 24) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 118, Real ops = 47, Vars = 15) (SOL-10)
+
+# Messages from "go libraries"
+
+Branching solution 'main.v2' at state 'compile' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Starting transformation 'libraries' on solution 'main.v2' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/psr2014a/mgc_Xilinx-KINTEX-7-3_beh_psr.lib' [mgc_Xilinx-KINTEX-7-3_beh_psr]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/psr2014a/ram_Xilinx-KINTEX-7-3_RAMSB.lib' [ram_Xilinx-KINTEX-7-3_RAMSB]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_accel_psr.lib' [Xilinx_accel]... (LIB-49)
+No Encrypted Liberty technology libraries have been specified (LIB-192)
+No Liberty technology libraries have been specified (LIB-192)
+No Synopsys DB technology libraries have been specified (LIB-192)
+
+# Messages from "go compile"
+
+Completed transformation 'analyze' on solution 'solution.v1': elapsed time 0.36 seconds, memory usage 1314276kB, peak memory usage 1314276kB (SOL-9)
+/DESIGN_HIERARCHY main
+Saving project file '/tp-fmr/sle3_509/Catapult_3.ccs'. (PRJ-5)
+Starting transformation 'compile' on solution 'solution.v1' (SOL-8)
+Generating synthesis internal form... (CIN-3)
+Found top design routine 'main' specified by directive (CIN-52)
+Synthesizing routine 'main' (CIN-13)
+Inlining routine 'main' (CIN-14)
+Inlining routine 'reconstruction_error' (CIN-14)
+Optimizing block '/main' ... (CIN-4)
+Inout port 'image_net' is only used as an input. (OPT-10)
+Inout port 'image_floue' is only used as an input. (OPT-10)
+Inout port 'depth' is only used as an output. (OPT-11)
+Optimizing partition '/main': (Total ops = 144, Real ops = 60, Vars = 49) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 144, Real ops = 60, Vars = 42) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 138, Real ops = 57, Vars = 42) (SOL-10)
+Optimizing partition '/main': (Total ops = 138, Real ops = 57, Vars = 49) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 117, Real ops = 57, Vars = 28) (SOL-10)
+Optimizing partition '/main': (Total ops = 117, Real ops = 57, Vars = 35) (SOL-10)
+Splitting object 'for:for:if:acc.tdx' into 2 segments (OPT-19)
+Splitting object 'pref' into 2 segments (OPT-19)
+Splitting object 'for:for:else:acc.tdx' into 2 segments (OPT-19)
+Splitting object 'pref#1' into 2 segments (OPT-19)
+Splitting object 'for:for:else:acc.tdx#1' into 2 segments (OPT-19)
+Splitting object 'for:for:else:acc.tdx#2' into 2 segments (OPT-19)
+Splitting object 'for#1:for:acc.tdx' into 2 segments (OPT-19)
+Splitting object 'pref#4' into 2 segments (OPT-19)
+Splitting object 'reconstruction_error:for:for:acc.tdx' into 2 segments (OPT-19)
+Splitting object 'reconstruction_error:for:for:acc.tdx#1' into 2 segments (OPT-19)
+Optimizing partition '/main/core': (Total ops = 110, Real ops = 51, Vars = 38) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 123, Real ops = 51, Vars = 14) (SOL-10)
+Optimizing partition '/main': (Total ops = 123, Real ops = 51, Vars = 21) (SOL-10)
+Optimizing partition '/main': (Total ops = 122, Real ops = 51, Vars = 21) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 122, Real ops = 51, Vars = 14) (SOL-10)
+Loop '/main/core/for:for' iterated at most 316 times. (LOOP-2)
+Loop '/main/core/for' iterated at most 216 times. (LOOP-2)
+Loop '/main/core/for#1:for' iterated at most 300 times. (LOOP-2)
+Loop '/main/core/for#1' iterated at most 200 times. (LOOP-2)
+Optimizing partition '/main/core': (Total ops = 152, Real ops = 46, Vars = 15) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 128, Real ops = 46, Vars = 15) (SOL-10)
+Optimizing partition '/main': (Total ops = 127, Real ops = 46, Vars = 22) (SOL-10)
+Splitting object 'for:i' into 2 segments (OPT-19)
+Splitting object 'for:for:j' into 2 segments (OPT-19)
+Splitting object 'for#1:i' into 2 segments (OPT-19)
+Splitting object 'for#1:for:j' into 2 segments (OPT-19)
+Optimizing partition '/main/core': (Total ops = 119, Real ops = 46, Vars = 19) (SOL-10)
+Optimizing partition '/main/core': (Total ops = 117, Real ops = 46, Vars = 15) (SOL-10)
+Optimizing partition '/main': (Total ops = 117, Real ops = 46, Vars = 22) (SOL-10)
+Design 'main' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+
+# Messages from "go analyze"
+
+8.0a
+/INPUTFILES/1
+/INPUTFILES/2
+/INPUTFILES/3
+/INPUTFILES/4
+100000
+Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Moving session transcript to file "/tp-fmr/sle3_509/catapult.log"
+Front End called with arguments: -- /tp-fmr/sle3_509/3D_mono_camera/main.cpp (CIN-69)
+Edison Design Group C++/C Front End - Version 4.10.1 (CIN-1)
+Source file analysis completed (CIN-68)
+
+# Messages from "go new"
+

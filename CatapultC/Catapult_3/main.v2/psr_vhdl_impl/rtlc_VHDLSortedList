@@ -1,0 +1,5 @@
+mgc_hls "/softl3/catapultc10_0a/64bit/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd" -2002 
+mgc_hls "/softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_ioport_comps_v11.vhd" -2002 
+mgc_hls "/softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_out_stdreg_v1.vhd" -2002 
+mgc_hls "/softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_io_sync_v1.vhd" -2002 
+work "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl" -2002 
