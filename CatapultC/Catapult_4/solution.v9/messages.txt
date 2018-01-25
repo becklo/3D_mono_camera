@@ -1,0 +1,21 @@
+
+# Messages from "go compile"
+
+Completed transformation 'analyze' on solution 'solution.v9': elapsed time 0.35 seconds, memory usage 1386080kB, peak memory usage 1386080kB (SOL-9)
+Starting transformation 'compile' on solution 'solution.v9' (SOL-8)
+Generating synthesis internal form... (CIN-3)
+No design detected (CIN-21)
+Design hierarchy must be selected interactively or using pragma 'hls_design top' (CIN-21)
+Compilation aborted (CIN-5)
+
+# Messages from "go analyze"
+
+Branching solution 'solution.v9' at state 'new' (PRJ-2)
+Completed transformation 'analyze' on solution 'solution.v8': elapsed time 0.61 seconds, memory usage 1386080kB, peak memory usage 1386080kB (SOL-9)
+Starting transformation 'analyze' on solution 'solution.v9' (SOL-8)
+Front End called with arguments: -- /tp-fmr/sle3_509/3D_mono_camera/conv.cpp (CIN-69)
+Edison Design Group C++/C Front End - Version 4.10.1 (CIN-1)
+Source file analysis completed (CIN-68)
+
+# Messages from "go new"
+

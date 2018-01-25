@@ -1,0 +1,157 @@
+# Info: [9566]: Logging project transcript to file /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl/precision.log
+# Info: [9566]: Logging suppressed messages transcript to file /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl/precision.log.suppressed
+# Info: [9550]: Activated implementation psr_vhdl_impl in project /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl.psp.
+# Info: [9564]: Project /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl.psp will not use temp directories.
+# Info: [9574]: Input directory: /tp-fmr/sle3_509/Catapult_3/main.v2
+# Info: [15297]: Setting up the design to use synthesis library "xck7.syn"
+# Info: [573]: The global max fanout is currently set to 10000 for Xilinx - KINTEX-7.
+# Info: [15323]: Setting Part to: "7K70TFBG676".
+# Info: [15324]: Setting Process to: "3".
+# Warning: [556]: transform_tristates option is set to value all internally for the current technology.
+# Info: [7513]: The default input to Vivado place and route has been set to "Verilog".
+# Info: [7512]: The place and route tool for current technology is Vivado.
+# Warning: [532]: setup_place_and_route: invalid argument '-enable_auto_offset_relaxation'
+# Info:  Disabling Auto Offset Relaxation in Vendor Constraint file.
+# Info: [9562]: Saved implementation psr_vhdl_impl in project /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl.psp.
+dofile rtl.vhdl.psr run_state mapped gui_mode 1
+# COMMAND: compile
+# Info: [3022]: Reading file: /softslin/precision2014a_64b/Mgc_home/pkgs/psr/techlibs/xck7.syn.
+# Info: [631]: Loading library initialization file /softslin/precision2014a_64b/Mgc_home/pkgs/psr/userware/xilinx_rename.tcl
+# Info: XILINX
+# Info: [40000]: vhdlorder, Release 2014a.1
+# Info: [40000]: Files sorted successfully.
+# Info: [40000]: hdl-analyze, Release RTLC-Precision 2014a.1
+# Info: [42502]: Analyzing input file "/softl3/catapultc10_0a/64bit/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd" ...
+# Info: [42502]: Analyzing input file "/softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_ioport_comps_v11.vhd" ...
+# Info: [42502]: Analyzing input file "/softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_out_stdreg_v1.vhd" ...
+# Info: [42502]: Analyzing input file "/softl3/catapultc10_0a/64bit/Mgc_home/pkgs/siflibs/mgc_io_sync_v1.vhd" ...
+# Info: [42502]: Analyzing input file "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl" ...
+# Info: [654]: Current working directory: /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl.
+# Info: [40000]: RTLC-Driver, Release RTLC-Precision 2014a.1
+# Info: [40000]: Last compiled on Feb 21 2014 20:01:23
+# Info: [44512]: Initializing...
+# Info: [44504]: Partitioning design ....
+# Info: [40000]: RTLCompiler, Release RTLC-Precision 2014a.1
+# Info: [40000]: Last compiled on Feb 21 2014 08:49:08
+# Info: [44512]: Initializing...
+# Info: [44522]: Root Module work.main(v2): Pre-processing...
+# Info: [44506]: Module work.ram_Xilinx_KINTEX_7_3_RAMSB_singleport_rport_3_60000_32_16_0_1_0_0_0_1_1_1_0_60000_32_1_gen(v2): Pre-processing...
+# Info: [44506]: Module work.ram_Xilinx_KINTEX_7_3_RAMSB_singleport_rport_4_60000_32_16_0_1_0_0_0_1_1_1_0_60000_32_1_gen(v2): Pre-processing...
+# Info: [44506]: Module work.ram_Xilinx_KINTEX_7_3_RAMSB_singleport_rwport_5_68256_32_17_0_1_0_0_0_1_1_1_0_68256_32_1_gen(v2): Pre-processing...
+# Info: [44506]: Module work.ram_Xilinx_KINTEX_7_3_RAMSB_singleport_wport_6_60000_32_16_0_1_0_0_0_1_1_1_0_60000_32_1_gen(v2): Pre-processing...
+# Info: [44506]: Module work.main_core(v2): Pre-processing...
+# Info: [44506]: Module mgc_hls.mgc_out_stdreg_v1(beh){generic map (rscid => 7 width => 32)}: Pre-processing...
+# Info: [44506]: Module mgc_hls.mgc_io_sync_v1(beh){generic map (valid => 0)}: Pre-processing...
+# Info: [44506]: Module work.main_core_core_fsm(v2): Pre-processing...
+# Info: [45143]: "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl", line 194: Enumerated type main_core_core_fsm_1_ST with 14 elements encoded as onehot.
+# Info: [45144]: Encodings for main_core_core_fsm_1_ST values.
+# Info: [40000]: value                              	       main_core_core_fsm_1_ST[13-0]
+# Info: [40000]: main_C_0                           	                00000000000001
+# Info: [40000]: for_for_C_0                        	                00000000000010
+# Info: [40000]: for_for_C_1                        	                00000000000100
+# Info: [40000]: for_for_C_2                        	                00000000001000
+# Info: [40000]: for_C_0                            	                00000000010000
+# Info: [40000]: for_1_for_C_0                      	                00000000100000
+# Info: [40000]: reconstruction_error_for_C_0       	                00000001000000
+# Info: [40000]: reconstruction_error_for_for_C_0   	                00000010000000
+# Info: [40000]: reconstruction_error_for_for_C_1   	                00000100000000
+# Info: [40000]: reconstruction_error_for_C_1       	                00001000000000
+# Info: [40000]: for_1_for_C_1                      	                00010000000000
+# Info: [40000]: for_1_for_C_2                      	                00100000000000
+# Info: [40000]: for_1_C_0                          	                01000000000000
+# Info: [40000]: main_C_1                           	                10000000000000
+# Info: [45144]: Extracted FSM in module work.main_core_core_fsm(v2), with state variable = state_var[13:0], async set/reset state(s) = (none), number of states = 14.
+# Info: [45144]: Re-encoding 14 state FSM as "onehot".
+# Info: [45144]: FSM: State encoding table.
+# Info: [40000]: FSM:	Index	                           State Name	                            Literal	                      Encoding
+# Info: [40000]: FSM:	    0	                          for_for_C_0	                     00000000000010	                00000000000001
+# Info: [40000]: FSM:	    1	                          for_for_C_1	                     00000000000100	                00000000000010
+# Info: [40000]: FSM:	    2	                          for_for_C_2	                     00000000001000	                00000000000100
+# Info: [40000]: FSM:	    3	                              for_C_0	                     00000000010000	                00000000001000
+# Info: [40000]: FSM:	    4	                        for_1_for_C_0	                     00000000100000	                00000000010000
+# Info: [40000]: FSM:	    5	         reconstruction_error_for_C_0	                     00000001000000	                00000000100000
+# Info: [40000]: FSM:	    6	     reconstruction_error_for_for_C_0	                     00000010000000	                00000001000000
+# Info: [40000]: FSM:	    7	     reconstruction_error_for_for_C_1	                     00000100000000	                00000010000000
+# Info: [40000]: FSM:	    8	         reconstruction_error_for_C_1	                     00001000000000	                00000100000000
+# Info: [40000]: FSM:	    9	                        for_1_for_C_1	                     00010000000000	                00001000000000
+# Info: [40000]: FSM:	   10	                        for_1_for_C_2	                     00100000000000	                00010000000000
+# Info: [40000]: FSM:	   11	                            for_1_C_0	                     01000000000000	                00100000000000
+# Info: [40000]: FSM:	   12	                             main_C_1	                     10000000000000	                01000000000000
+# Info: [40000]: FSM:	   13	                             main_C_0	                     00000000000001	                10000000000000
+# Warning: [45729]: "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl", line 343: signal fsm_output[13] has never been used.
+# Warning: [45729]: "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl", line 343: signal fsm_output[3] has never been used.
+# Warning: [45729]: "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl", line 1191: signal PWR has never been used.
+# Warning: [45729]: "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl", line 1192: signal GND has never been used.
+# Info: [44508]: Module work.ram_Xilinx_KINTEX_7_3_RAMSB_singleport_rport_3_60000_32_16_0_1_0_0_0_1_1_1_0_60000_32_1_gen(v2): Compiling...
+# Info: [44508]: Module work.ram_Xilinx_KINTEX_7_3_RAMSB_singleport_rport_4_60000_32_16_0_1_0_0_0_1_1_1_0_60000_32_1_gen(v2): Compiling...
+# Info: [44508]: Module work.ram_Xilinx_KINTEX_7_3_RAMSB_singleport_rwport_5_68256_32_17_0_1_0_0_0_1_1_1_0_68256_32_1_gen(v2): Compiling...
+# Info: [44508]: Module work.ram_Xilinx_KINTEX_7_3_RAMSB_singleport_wport_6_60000_32_16_0_1_0_0_0_1_1_1_0_60000_32_1_gen(v2): Compiling...
+# Info: [44508]: Module mgc_hls.mgc_out_stdreg_v1(beh){generic map (rscid => 7 width => 32)}: Compiling...
+# Info: [44508]: Module mgc_hls.mgc_io_sync_v1(beh){generic map (valid => 0)}: Compiling...
+# Info: [44508]: Module work.main_core_core_fsm(v2): Compiling...
+# Info: [44508]: Module work.main_core(v2): Compiling...
+# Info: [44838]: "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl", line 884: Macro Add_Sub "M_RTLSIM_ADD_SUB_5" inferred for node "for_1_for_acc_6_psp_1_sva".
+# Info: [44838]: "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl", line 1100: Macro Add_Sub "M_RTLSIM_ADD_SUB_8" inferred for node "z_out_3".
+# Info: [44838]: "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl", line 1107: Macro Add_Sub "M_RTLSIM_ADD_SUB_9" inferred for node "z_out_5".
+# Info: [44838]: "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl", line 1142: Macro Add_Sub "M_RTLSIM_ADD_SUB_32" inferred for node "z_out_8".
+# Info: [44838]: "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl", line 1035: Macro Add_Sub "M_RTLSIM_ADD_SUB_6" inferred for node "for_1_for_acc_7_psp_1_sva_1".
+# Info: [44523]: Root Module work.main(v2): Compiling...
+# Info: [44846]: Rebalanced Expression Tree...
+# Info: [44842]: Compilation successfully completed.
+# Info: [44841]: Counter Inferencing === Detected : 5, Inferred (Modgen/Selcounter/AddSub) : 5 (0 / 0 / 5), AcrossDH (Merged/Not-Merged) : (0 / 4), Not-Inferred (Acrossdh/Attempted) : (0 / 0), Local Vars : 0 ===
+# Info: [44856]: Total lines of RTL compiled: 1373.
+# Info: [44835]: Total CPU time for compilation: 0.0 secs.
+# Info: [44513]: Overall running time for compilation: 6.0 secs.
+# Info: [654]: Current working directory: /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl.
+# Info: 1.6
+# Info: clk
+# Info: [15329]: Doing rtl optimizations.
+# Info: [9028]: "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl", line 865: : Inferred selective adder Instance 'instance:main_core_inst.ix359' of type 'cell:seladd_14_14_14_0_0'
+# Info: 1.6
+# Info: clk
+# Info: [657]: Finished compiling design.
+compile
+# COMMAND: synthesize
+# Info: [654]: Current working directory: /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl.
+# Info: [4556]: 1 Instances are flattened in hierarchical block .work.main_core.v2_unfold_1557.
+# Info: [11008]: "/tp-fmr/sle3_509/Catapult_3/main.v2/rtl.vhdl", line 1082: Using 4 levels of output pipelining instead of 0 may improve the performance of multiplier instance:main_core_inst.z_out_multu32_0
+# Info: [15002]: Optimizing design view:.work.main_core.v2_unfold_1557
+# Info: [15002]: Optimizing design view:.work.main.v2
+# Info: [4556]: 1 Instances are flattened in hierarchical block .work.main.v2.
+# Info: [15002]: Optimizing design view:.work.main.v2
+# Info: [8045]: Added global buffer BUFGP for Port port:clk
+# Info: [12045]: Starting timing reports generation...
+# Info: [12046]: Timing reports generation done.
+# Info: [12047]: POST-SYNTHESIS TIMING REPORTS ARE ESTIMATES AND SHOULD NOT BE RELIED ON TO MAKE QoR DECISIONS. For accurate timing information, please run place-and-route (P&R) and review P&R generated timing reports.
+# Info: [3027]: Writing file: /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl/main.edf.
+# Info: [3027]: Writing file: /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl/main.xdc.
+# Info: [3027]: Writing file: /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl/main.v.
+# Info: -- Writing file /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl/main.tcl
+# Info: [3027]: Writing file: /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl/main.xdc.
+# Info: [657]: Finished synthesizing design.
+# Info: [11019]: Total CPU time for synthesis: 10.3 s secs.
+# Info: [11020]: Overall running time for synthesis: 11.8 s secs.
+synthesize
+# COMMAND: save_project
+# Info: [9562]: Saved implementation psr_vhdl_impl in project /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl.psp.
+save_project
+# COMMAND: close_project -discard
+# Info: [9565]: Appending project transcript to file /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl/precision.log
+# Info: [9565]: Appending suppressed messages transcript to file /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl/precision.log.suppressed
+# Info: [15297]: Setting up the design to use synthesis library "xck7.syn"
+# Info: [573]: The global max fanout is currently set to 10000 for Xilinx - KINTEX-7.
+# Info: [15323]: Setting Part to: "7K70TFBG676".
+# Info: [15324]: Setting Process to: "3".
+# Warning: [556]: transform_tristates option is set to value all internally for the current technology.
+# Info: [7513]: The default input to Vivado place and route has been set to "Verilog".
+# Info: [7512]: The place and route tool for current technology is Vivado.
+# Warning: [568]: Setting 'optimize_power_effort' is not allowed in RTL product mode. Ignoring.
+# Info: [7512]: The place and route tool for current technology is Vivado.
+# Info: [7513]: The default input to Vivado place and route has been set to "Verilog".
+# Info: [3022]: Reading file: /softslin/precision2014a_64b/Mgc_home/pkgs/psr/techlibs/xck7.syn.
+# Info: [631]: Loading library initialization file /softslin/precision2014a_64b/Mgc_home/pkgs/psr/userware/xilinx_rename.tcl
+# Info: XILINX
+# Error: [578]: set_clock_uncertainty: near 'clk'; 'Uncertainty of clock networks' should be of type float
+# Info: [9550]: Activated implementation psr_vhdl_impl in project /tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl.psp.
+dofile rtl.vhdl.psr run_state mapped gui_mode 1
+# COMMAND: exit -force

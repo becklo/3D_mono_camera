@@ -1,0 +1,15 @@
+directive set /conv/conv:core/conv:core:conc/for:for:for:for:acc RESOURCE_NAME for:for:for:acc:rg
+directive set /conv/conv:core/conv:core:conc/for:for:for:acc RESOURCE_NAME for:for:for:acc:rg
+directive set /conv/conv:core/conv:core:conc/for:acc RESOURCE_NAME for:acc:rg
+directive set /conv/conv:core/conv:core:conc/for:for:acc RESOURCE_NAME for:acc:rg
+directive set /conv/conv:core/conv:core:conc/for:for:for:for:aif#2:acc RESOURCE_NAME for:acc:rg
+directive set /conv/conv:core/conv:core:conc/for:for:for:for:if:for:for:for:for:if:acc#3 RESOURCE_NAME for:acc:rg
+directive set /conv/conv:core/conv:core:conc/for:acc#2 RESOURCE_NAME for:acc#1:rg
+directive set /conv/conv:core/conv:core:conc/for:acc#1 RESOURCE_NAME for:acc#1:rg
+directive set /conv/conv:core/conv:core:conc/for:for:acc#2 RESOURCE_NAME for:acc#1:rg
+directive set /conv/conv:core/conv:core:conc/for:for:acc#1 RESOURCE_NAME for:acc#1:rg
+directive set /conv/conv:core/conv:core:conc/for:for:for:acc#3 RESOURCE_NAME for:for:for:acc#3:rg
+directive set /conv/conv:core/conv:core:conc/for:for:for:for:acc#8 RESOURCE_NAME for:for:for:acc#3:rg
+directive set /conv/conv:core/conv:core:conc/for:for:for:for:if:mul RESOURCE_NAME for:for:for:for:if:mul:rg
+directive set /conv/conv:core/conv:core:conc/for:for:for:for:if:mul#1 RESOURCE_NAME for:for:for:for:if:mul:rg
+directive set /conv/conv:core/conv:core:conc/for:for:for:for:if:mul#3 RESOURCE_NAME for:for:for:for:if:mul:rg

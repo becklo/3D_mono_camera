@@ -86,7 +86,6 @@ int main(){
       }
     }
 
-
     //retour de la profondeur
     depth(im_depth,rec_error_tab1,rec_error_tab2,\
       rec_error_tab3,\
