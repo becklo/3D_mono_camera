@@ -1,16 +1,54 @@
 #include <iostream>
 #include <stdio.h>
 
-int kCols = 17;
-int kRows = 17;
+#include "var.h"
+#include "coef_filtre.h"
 
-// find center position of kernel (half of kernel size)
-int kCenterX = kCols / 2;
-int kCenterY = kRows / 2;
+void conv(int image[IMG_WIDTH][IMG_HEIGHT], int rows, int cols, int num_filtre, double **sortie){//[IMG_WIDTH+16][IMG_HEIGHT+16]){
+  int mm,nn,ii,jj,kCols,kRows;
 
+  switch (num_filtre) {
+    case 1:
+      kCols = 17;
+      kRows = 17;
+      break;
+    case  2 :
+      kCols = 15;
+      kRows = 15;
+      break;
+    case  3 :
+      kCols = 15;
+      kRows = 15;
+      break;
+    case 4 :
+      kCols = 13;
+      kRows = 13;
+      break;
+    case 5 :
+      kCols = 13;
+      kRows = 13;
+      break;
+    case 6:
+      kCols = 11;
+      kRows = 11;
+      break;
+    case 7 :
+      kCols = 9;
+      kRows = 9;
+      break;
+    case 8 :
+      kCols = 9;
+      kRows = 9;
+      break;
+    case 9 :
+      kCols = 9;
+      kRows = 9;
+      break;
+  }
+  // find center position of kernel (half of kernel size)
+  int kCenterX = kCols / 2;
+  int kCenterY = kRows / 2;
 
-void conv(int image[1694][1107], int rows, int cols, double kernel[17][17], double sortie[1694+16][1107+16]){
-  int mm,nn,ii,jj;
   for(int i=0; i < rows; ++i){              // rows
       for(int j=0; j < cols; ++j){          // columns
           for(int m=0; m < kRows; ++m){     // kernel rows
@@ -23,9 +61,38 @@ void conv(int image[1694][1107], int rows, int cols, double kernel[17][17], doub
                   jj = j + (n - kCenterX);
 
                   // ignore input samples which are out of bound
-                  if( ii >= 0 && ii < rows && jj >= 0 && jj < cols )
-                      sortie[i][j] += image[ii][jj] * kernel[mm][nn];
-              
+                  if( ii >= 0 && ii < rows && jj >= 0 && jj < cols ){
+                    switch (num_filtre) {
+                      case 1 :
+                        sortie[j][i] += image[jj][ii] * coeffs_double_1[17*nn+mm];
+                        break;
+                      case  2 :
+                        sortie[j][i] += image[jj][ii] * coeffs_double_2[15*nn+mm];
+                        break;
+                      case  3 :
+                        sortie[j][i] += image[jj][ii] * coeffs_double_3[15*nn+mm];
+                        break;
+                      case  4 :
+                        sortie[j][i] += image[jj][ii] * coeffs_double_4[13*nn+mm];
+                        break;
+                      case 5:
+                        sortie[j][i] += image[jj][ii] * coeffs_double_5[13*nn+mm];
+                        break;
+                      case 6:
+                        sortie[j][i] += image[jj][ii] * coeffs_double_6[11*nn+mm];
+                        break;
+                      case 7:
+                        sortie[j][i] += image[jj][ii] * coeffs_double_7[9*nn+mm];
+                        break;
+                      case 8:
+                        sortie[j][i] += image[jj][ii] * coeffs_double_8[9*nn+mm];
+                        break;
+                      case 9:
+                        sortie[j][i] += image[jj][ii] * coeffs_double_9[9*nn+mm];
+                        break;
+                    }
+                  }
+
               }
           }
       }

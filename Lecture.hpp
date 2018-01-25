@@ -10,6 +10,7 @@
 #define Lecture_hpp
 
 #include <stdio.h>
+#include "var.h"
 
 char format [2];
 char taille [256] ;
@@ -18,7 +19,7 @@ int max;
 int tx,ty;
 
 
-void lecture_image(int **image);
-void lecture_filtre(double **filtre);
+void lecture_image(int image[IMG_WIDTH][IMG_HEIGHT],char* name);
+//void lecture_filtre(double filtre[17][17],int taille,char* name);
 
 #endif /* Lecture_hpp */
