@@ -1,6 +1,0 @@
-1516110936.584468
-*3925876707
-IEEE	/softl3/precision2014a_64b/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE_2002	STD_LOGIC_1164	STD_LOGIC_1164	2	0
-IEEE	/softl3/precision2014a_64b/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE_2002	STD_LOGIC_ARITH	STD_LOGIC_ARITH	2	0
-mgc_hls	/tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl/rtlc_libs/mgc_hls	FUNCS	FUNCS	2	4204430071
-mgc_hls	/tp-fmr/sle3_509/Catapult_3/main.v2/psr_vhdl_impl/rtlc_libs/mgc_hls	MGC_IOPORT_COMPS_V11	MGC_IOPORT_COMPS_V11	2	2597828162
