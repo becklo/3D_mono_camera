@@ -50,11 +50,6 @@ void conv(int image[IMG_WIDTH][IMG_HEIGHT], int rows, int cols, int num_filtre, 
   int kCenterX = kCols / 2;
   int kCenterY = kRows / 2;
 
-<<<<<<< HEAD
-=======
-void conv(int image[300][200], int rows, int cols, int kernel[17][17], long sortie[300+16][200+16]){
-  int mm,nn,ii,jj;
->>>>>>> b636214bff427734e62a246399269596f1416049
   for(int i=0; i < rows; ++i){              // rows
       for(int j=0; j < cols; ++j){          // columns
           for(int m=0; m < kRows; ++m){     // kernel rows

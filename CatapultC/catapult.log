@@ -13,18 +13,16 @@
 //  This version may only be used for academic purposes.  Some optimizations 
 //  are disabled, so results obtained from this version may be sub-optimal.
 //  
-//  Start time Wed Jan 24 15:39:15 2018
+//  Start time Mon Jan 29 12:06:36 2018
 # -------------------------------------------------
-# Logging session transcript to file "/tmp/log27021828399e.0"
-# Moving session transcript to file "/tp-fmr/sle3_509/CatapultC/catapult.log"
-# Warning: XML Reader failed to push into tag: CLEANLEAF (BASIC-31)
+# Logging session transcript to file "/tmp/log2294e8283a26.0"
+# Moving session transcript to file "/tp-fmr/sle3_509/3D_mono_camera/CatapultC/catapult.log"
 # Warning: No Encrypted Liberty technology libraries have been specified (LIB-192)
 # Warning: No Liberty technology libraries have been specified (LIB-192)
 # Warning: No Synopsys DB technology libraries have been specified (LIB-192)
-# Warning: No Encrypted Liberty technology libraries have been specified (LIB-192)
-# Warning: No Liberty technology libraries have been specified (LIB-192)
-# Warning: No Synopsys DB technology libraries have been specified (LIB-192)
-go compile
-# Error: Failed to configure library selection, invalid library selection
-solution library remove *
-# Info: Branching solution 'conv.v2' at state 'compile' (PRJ-2)
+flow run /Vivado/synthesize vivado/rtl.vhdl.xv
+# Error: utility path hard: unable to convert path
+flow run /Vivado/synthesize vivado/concat_rtl.vhdl.xv
+# Error: utility path hard: unable to convert path
+quit -f
+// Finish time Mon Jan 29 12:07:08 2018, time elapsed 0:32, peak memory 1.13GB, exit status 0

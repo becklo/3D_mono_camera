@@ -1,0 +1,40 @@
+## HLS SP synthesis script
+## Generated for stage extract
+## Vivado mode is Non-project
+
+# Reporting settings
+puts "-- Requested 4 fractional digits for design 'conv' timing"
+puts "-- Requested 4 fractional digits for design 'conv' capacitance"
+puts "-- Characterization mode: p2p "
+
+puts "-- Timing report: '/tp-fmr/sle3_509/3D_mono_camera/CatapultC/Catapult_1/conv.v1/vivado/timing_summary_synth.rpt' "
+puts "-- Utilization report: '/tp-fmr/sle3_509/3D_mono_camera/CatapultC/Catapult_1/conv.v1/vivado/utilization_synth.rpt' "
+
+# Environment variable settings
+global env
+set CATAPULT_HOME "/softl3/catapultc10_0a/64bit/Mgc_home"
+## Set the variable for file path prefixing 
+set RTL_TOOL_SCRIPT_DIR /tp-fmr/sle3_509/3D_mono_camera/CatapultC/Catapult_1/conv.v1/vivado
+set RTL_TOOL_SCRIPT_DIR [file dirname [file normalize [info script] ] ]
+puts "-- RTL_TOOL_SCRIPT_DIR is set to '$RTL_TOOL_SCRIPT_DIR' "
+# Vivado Non-Project mode script starts here
+set outputDir /tp-fmr/sle3_509/3D_mono_camera/CatapultC/Catapult_1/conv.v1/vivado
+#file mkdir $outputDir
+#
+# STEP#1: setup design sources and constraints
+#
+create_project tcl_concat_vhdl
+   read_vhdl -library work ../concat_rtl.vhdl
+read_xdc /tp-fmr/sle3_509/3D_mono_camera/CatapultC/Catapult_1/conv.v1/vivado/concat_rtl.vhdl.xv.sdc
+#
+# STEP#2: run synthesis, report utilization and timing estimates, write checkpoint design
+#
+synth_design -top conv -part xc7a50tftg256-3 -mode out_of_context 
+write_checkpoint -force $outputDir/post_synth
+report_utilization -file $outputDir/utilization_synth.rpt
+report_timing -nworst 1 -from [all_inputs] -to [all_outputs] -file $outputDir/timing_summary_synth.rpt
+if { [llength [all_clocks] ] > 0 } {
+report_timing -nworst 1 -from [all_inputs] -to [all_clocks]  -file $outputDir/timing_summary_synth.rpt -append
+report_timing -nworst 1 -from [all_clocks] -to [all_clocks]  -file $outputDir/timing_summary_synth.rpt -append
+report_timing -nworst 1 -from [all_clocks] -to [all_outputs] -file $outputDir/timing_summary_synth.rpt -append
+}

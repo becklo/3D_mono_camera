@@ -16,7 +16,7 @@
 solution new -state initial
 solution options defaults
 flow package require /SCVerify
-solution file add ./3D_mono_camera/conv.cpp -type C++
+solution file add ../conv.cpp -type C++
 directive set -DESIGN_GOAL area
 directive set -OLD_SCHED false
 directive set -SPECULATE true
@@ -54,5 +54,6 @@ directive set -CLUSTER_FAST_MODE false
 directive set -CLUSTER_TYPE combinational
 directive set -COMPGRADE fast
 go new
-directive set -DESIGN_HIERARCHY {}
-go analyze
+directive set -DESIGN_HIERARCHY conv
+go compile
+go compile
