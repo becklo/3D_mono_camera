@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdio.h>
-<<<<<<< HEAD
 #include <math.h>
 #include "var.h"
 #include "conv.cpp"
@@ -35,15 +34,6 @@ void reconstruction_error(int **rec_error_tab,int i, int j){
    }
   rec_error_tab[j][i]=rec_error;
 }
-=======
-#include "var.h"
-
-int reconstruction_error(int rec_error_tab[IMG_WIDTH+16][IMG_HEIGHT+16],int i, int j){
-  int rec_error = 0;
-  for (int l = i - 5; l < i+5; l++){
-    for(int c = j - 5; c < j+5; c++ ){
-      rec_error += rec_error_tab[c][l]*rec_error_tab[c][l];
->>>>>>> b636214bff427734e62a246399269596f1416049
 
 void depth(int **image_depht,int **rec_error_tab1,\
                             int **rec_error_tab2,\
