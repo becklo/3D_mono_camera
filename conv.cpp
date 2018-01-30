@@ -5,7 +5,7 @@
 #include "var.h"
 #include "coef_filtre.h"
 
-void conv(int image[IMG_WIDTH][IMG_HEIGHT], int rows, int cols, int num_filtre, double **sortie){//[IMG_WIDTH+16][IMG_HEIGHT+16]){
+void conv(int image[IMG_WIDTH][IMG_HEIGHT], int rows, int cols, int num_filtre, double sortie[IMG_WIDTH+16][IMG_HEIGHT+16]){//[IMG_WIDTH+16][IMG_HEIGHT+16]){
   int mm,nn,ii,jj,kCols,kRows;
 
   switch (num_filtre) {

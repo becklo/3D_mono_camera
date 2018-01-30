@@ -15,38 +15,50 @@
 int image_net[IMG_WIDTH][IMG_HEIGHT];
 int image_floue[IMG_WIDTH][IMG_HEIGHT];
 
+int im_depth[IMG_WIDTH][IMG_HEIGHT];
+
+int rec_error_tab1[IMG_WIDTH+16][IMG_HEIGHT+16];
+int rec_error_tab2[IMG_WIDTH+16][IMG_HEIGHT+16];
+int rec_error_tab3[IMG_WIDTH+16][IMG_HEIGHT+16];
+int rec_error_tab4[IMG_WIDTH+16][IMG_HEIGHT+16];
+int rec_error_tab5[IMG_WIDTH+16][IMG_HEIGHT+16];
+int rec_error_tab6[IMG_WIDTH+16][IMG_HEIGHT+16];
+int rec_error_tab7[IMG_WIDTH+16][IMG_HEIGHT+16];
+int rec_error_tab8[IMG_WIDTH+16][IMG_HEIGHT+16];
+int rec_error_tab9[IMG_WIDTH+16][IMG_HEIGHT+16];
+
 int main(){
 
-    lecture_image(image_net,"image/trees_deb.pgm");
-    lecture_image(image_floue,"image/trees_inp.pgm");
+    lecture_image(image_net,"image_net_mini.pgm");
+    lecture_image(image_floue,"image_floue_mini.pgm");
 
-    int **im_depth = (int**)malloc(sizeof(*im_depth) * (IMG_WIDTH));
-    for (int i = 0; i < IMG_WIDTH+16; i++){
-      im_depth[i] = (int*)malloc(sizeof(**im_depth) * (IMG_HEIGHT));
-    }
-
-    //init tab1
-    int **rec_error_tab1 = (int**)malloc(sizeof(*rec_error_tab1) * (IMG_WIDTH+16));
-    int **rec_error_tab2 = (int**)malloc(sizeof(*rec_error_tab2) * (IMG_WIDTH+16));
-    int **rec_error_tab3 = (int**)malloc(sizeof(*rec_error_tab3) * (IMG_WIDTH+16));
-    int **rec_error_tab4 = (int**)malloc(sizeof(*rec_error_tab4) * (IMG_WIDTH+16));
-    int **rec_error_tab5 = (int**)malloc(sizeof(*rec_error_tab5) * (IMG_WIDTH+16));
-    int **rec_error_tab6 = (int**)malloc(sizeof(*rec_error_tab6) * (IMG_WIDTH+16));
-    int **rec_error_tab7 = (int**)malloc(sizeof(*rec_error_tab7) * (IMG_WIDTH+16));
-    int **rec_error_tab8 = (int**)malloc(sizeof(*rec_error_tab8) * (IMG_WIDTH+16));
-    int **rec_error_tab9 = (int**)malloc(sizeof(*rec_error_tab9) * (IMG_WIDTH+16));
-
-    for (int i = 0; i < IMG_WIDTH+16; i++){
-      rec_error_tab1[i] = (int*)malloc(sizeof(**rec_error_tab1) * (IMG_HEIGHT+16));
-      rec_error_tab2[i] = (int*)malloc(sizeof(**rec_error_tab2) * (IMG_HEIGHT+16));
-      rec_error_tab3[i] = (int*)malloc(sizeof(**rec_error_tab3) * (IMG_HEIGHT+16));
-      rec_error_tab4[i] = (int*)malloc(sizeof(**rec_error_tab4) * (IMG_HEIGHT+16));
-      rec_error_tab5[i] = (int*)malloc(sizeof(**rec_error_tab5) * (IMG_HEIGHT+16));
-      rec_error_tab6[i] = (int*)malloc(sizeof(**rec_error_tab6) * (IMG_HEIGHT+16));
-      rec_error_tab7[i] = (int*)malloc(sizeof(**rec_error_tab7) * (IMG_HEIGHT+16));
-      rec_error_tab8[i] = (int*)malloc(sizeof(**rec_error_tab8) * (IMG_HEIGHT+16));
-      rec_error_tab9[i] = (int*)malloc(sizeof(**rec_error_tab9) * (IMG_HEIGHT+16));
-    }
+    // int **im_depth = (int**)malloc(sizeof(*im_depth) * (IMG_WIDTH));
+    // for (int i = 0; i < IMG_WIDTH+; i++){
+    //   im_depth[i] = (int*)malloc(sizeof(**im_depth) * (IMG_HEIGHT));
+    // }
+    //
+    // //init tab1
+    // int **rec_error_tab1 = (int**)malloc(sizeof(*rec_error_tab1) * (IMG_WIDTH+16));
+    // int **rec_error_tab2 = (int**)malloc(sizeof(*rec_error_tab2) * (IMG_WIDTH+16));
+    // int **rec_error_tab3 = (int**)malloc(sizeof(*rec_error_tab3) * (IMG_WIDTH+16));
+    // int **rec_error_tab4 = (int**)malloc(sizeof(*rec_error_tab4) * (IMG_WIDTH+16));
+    // int **rec_error_tab5 = (int**)malloc(sizeof(*rec_error_tab5) * (IMG_WIDTH+16));
+    // int **rec_error_tab6 = (int**)malloc(sizeof(*rec_error_tab6) * (IMG_WIDTH+16));
+    // int **rec_error_tab7 = (int**)malloc(sizeof(*rec_error_tab7) * (IMG_WIDTH+16));
+    // int **rec_error_tab8 = (int**)malloc(sizeof(*rec_error_tab8) * (IMG_WIDTH+16));
+    // int **rec_error_tab9 = (int**)malloc(sizeof(*rec_error_tab9) * (IMG_WIDTH+16));
+    //
+    // for (int i = 0; i < IMG_WIDTH+16; i++){
+    //   rec_error_tab1[i] = (int*)malloc(sizeof(**rec_error_tab1) * (IMG_HEIGHT+16));
+    //   rec_error_tab2[i] = (int*)malloc(sizeof(**rec_error_tab2) * (IMG_HEIGHT+16));
+    //   rec_error_tab3[i] = (int*)malloc(sizeof(**rec_error_tab3) * (IMG_HEIGHT+16));
+    //   rec_error_tab4[i] = (int*)malloc(sizeof(**rec_error_tab4) * (IMG_HEIGHT+16));
+    //   rec_error_tab5[i] = (int*)malloc(sizeof(**rec_error_tab5) * (IMG_HEIGHT+16));
+    //   rec_error_tab6[i] = (int*)malloc(sizeof(**rec_error_tab6) * (IMG_HEIGHT+16));
+    //   rec_error_tab7[i] = (int*)malloc(sizeof(**rec_error_tab7) * (IMG_HEIGHT+16));
+    //   rec_error_tab8[i] = (int*)malloc(sizeof(**rec_error_tab8) * (IMG_HEIGHT+16));
+    //   rec_error_tab9[i] = (int*)malloc(sizeof(**rec_error_tab9) * (IMG_HEIGHT+16));
+    // }
 
     //remplissage des tables d'erreur entre floue et conv
     creation_error(image_floue,image_net,1,rec_error_tab1);

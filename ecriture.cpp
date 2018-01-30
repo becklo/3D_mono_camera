@@ -24,7 +24,7 @@ int ecriture_image_norm(char * image, int image_test[IMG_WIDTH][IMG_HEIGHT]){
         return 0;
 }
 
-int ecriture_image_norm_mal(char * image, int **image_test){
+int ecriture_image_norm_mal(char * image, int image_test[IMG_WIDTH][IMG_HEIGHT]){
     std::ofstream fichier(image, std::ios::out | std::ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
 
          if(fichier)

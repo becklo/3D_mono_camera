@@ -6,13 +6,14 @@
 
 
 void creation_error(int image_floue[IMG_WIDTH][IMG_HEIGHT], int image_net[IMG_WIDTH][IMG_HEIGHT],
-                    int num_filtre, int **rec_error_tab){//[IMG_WIDTH+16][IMG_HEIGHT+16]){
+                    int num_filtre, int rec_error_tab[IMG_WIDTH+16][IMG_HEIGHT+16]){//[IMG_WIDTH+16][IMG_HEIGHT+16]){
 
-  double **result_conv = (double**)malloc(sizeof(*result_conv) * (IMG_WIDTH+16));
-
-  for (int i = 0; i < IMG_WIDTH+16; i++){
-    result_conv[i] = (double*)malloc(sizeof(**result_conv) * (IMG_HEIGHT+16));
-  }
+  double result_conv[IMG_WIDTH+16][IMG_HEIGHT+16];
+  // double **result_conv = (double**)malloc(sizeof(*result_conv) * (IMG_WIDTH+16));
+  //
+  // for (int i = 0; i < IMG_WIDTH+16; i++){
+  //   result_conv[i] = (double*)malloc(sizeof(**result_conv) * (IMG_HEIGHT+16));
+  // }
   conv(image_net,IMG_HEIGHT,IMG_WIDTH,num_filtre,result_conv);
   std::cout << "conv done" << '\n';
   for(int i = 0 ; i < IMG_HEIGHT; i++){
@@ -25,7 +26,7 @@ void creation_error(int image_floue[IMG_WIDTH][IMG_HEIGHT], int image_net[IMG_WI
   }
 }
 
-void reconstruction_error(int **rec_error_tab,int i, int j){
+void reconstruction_error(int rec_error_tab[IMG_WIDTH+16][IMG_HEIGHT+16],int i, int j){
   int rec_error = 0;
   for (int l = i - SIZE_WI; l < i + SIZE_WI; l++){
     for(int c = j - SIZE_WI; c < j + SIZE_WI; c++ ){
@@ -35,15 +36,15 @@ void reconstruction_error(int **rec_error_tab,int i, int j){
   rec_error_tab[j][i]=rec_error;
 }
 
-void depth(int **image_depht,int **rec_error_tab1,\
-                            int **rec_error_tab2,\
-                            int **rec_error_tab3,\
-                            int **rec_error_tab4,\
-                            int **rec_error_tab5,\
-                            int **rec_error_tab6,\
-                            int **rec_error_tab7,\
-                            int **rec_error_tab8,\
-                            int **rec_error_tab9
+void depth(int image_depht[IMG_WIDTH][IMG_HEIGHT],int rec_error_tab1[IMG_WIDTH+16][IMG_HEIGHT+16],\
+                            int rec_error_tab2[IMG_WIDTH+16][IMG_HEIGHT+16],\
+                            int rec_error_tab3[IMG_WIDTH+16][IMG_HEIGHT+16],\
+                            int rec_error_tab4[IMG_WIDTH+16][IMG_HEIGHT+16],\
+                            int rec_error_tab5[IMG_WIDTH+16][IMG_HEIGHT+16],\
+                            int rec_error_tab6[IMG_WIDTH+16][IMG_HEIGHT+16],\
+                            int rec_error_tab7[IMG_WIDTH+16][IMG_HEIGHT+16],\
+                            int rec_error_tab8[IMG_WIDTH+16][IMG_HEIGHT+16],\
+                            int rec_error_tab9[IMG_WIDTH+16][IMG_HEIGHT+16]
                           ){
 
   int tempo[9];
@@ -67,6 +68,7 @@ void depth(int **image_depht,int **rec_error_tab1,\
           mini_rank = m;
           }
         }
+      std::cout << "mini_rank : " << mini_rank << '\n';
       image_depht[j][i]= mini_rank*((int)(255/9));
       if (image_depht[j][i]>255) {
         image_depht[j][i]=255;
