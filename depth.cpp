@@ -24,12 +24,6 @@ void creation_error(int image_floue[IMG_WIDTH][IMG_HEIGHT], int image_net[IMG_WI
         rec_error_tab[j][i] = 0;
       }
       rec_error_tab[j][i] = image_floue[j][i] - (int)result_conv[j][i];
-      if (rec_error_tab[j][i]>255) {
-        rec_error_tab[j][i]=255;
-        }
-      if (rec_error_tab[j][i]<-255) {
-        rec_error_tab[j][i]=-255;
-        }
     }
   }
 }
@@ -38,17 +32,23 @@ void reconstruction_error(int rec_error_tab[IMG_WIDTH][IMG_HEIGHT],int i, int j)
   int rec_error = 0;
   for (int l = i - SIZE_WI; l < i + SIZE_WI; l++){
     for(int c = j - SIZE_WI; c < j + SIZE_WI; c++ ){
-      rec_error += (int)pow((int)rec_error_tab[c][l],2);
+      if (rec_error_tab[c][l]>46340) {
+        rec_error_tab[c][l]=46340;
+        }
+      if (rec_error_tab[c][l]<-46340) {
+        rec_error_tab[c][l]=-46340;
+        }
+        rec_error += (int)rec_error_tab[c][l]*(int)rec_error_tab[c][l];
     }
    }
-  std::cout << "rec_error : " << rec_error << '\n';
-  if (rec_error>0){
-    rec_error_tab[j][i]=rec_error;
-  }
-  else {
-    rec_error_tab[j][i]=2147483647+rec_error;
-  }
-  std::cout << "rec_error_tab : " << rec_error_tab[j][i] << '\n';
+   std::cout << "rec_error before: " << rec_error << '\n';
+  // if (rec_error > 0){
+    rec_error_tab[j][i]=(int)rec_error;
+  // }
+  // else {
+  //   rec_error_tab[j][i]=2147483647+rec_error;
+  // }
+
 }
 
 void depth(int image_depht[IMG_WIDTH][IMG_HEIGHT],int rec_error_tab1[IMG_WIDTH][IMG_HEIGHT],\
