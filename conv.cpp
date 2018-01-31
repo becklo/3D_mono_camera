@@ -5,7 +5,7 @@
 #include "var.h"
 #include "coef_filtre.h"
 
-void conv(int image[IMG_WIDTH][IMG_HEIGHT], int rows, int cols, int num_filtre, double sortie[IMG_WIDTH+16][IMG_HEIGHT+16]){//[IMG_WIDTH+16][IMG_HEIGHT+16]){
+void conv(int image[IMG_WIDTH][IMG_HEIGHT], int rows, int cols, int num_filtre, double sortie[IMG_WIDTH][IMG_HEIGHT]){//[IMG_WIDTH+16][IMG_HEIGHT+16]){
   int mm,nn,ii,jj,kCols,kRows;
 
   switch (num_filtre) {
@@ -50,8 +50,12 @@ void conv(int image[IMG_WIDTH][IMG_HEIGHT], int rows, int cols, int num_filtre, 
   int kCenterX = kCols / 2;
   int kCenterY = kRows / 2;
 
-  for(int i=0; i < rows; ++i){              // rows
-      for(int j=0; j < cols; ++j){          // columns
+  for(int i=0; i < rows; i++){              // rows
+      for(int j=0; j < cols; j++){          // columns
+        if (i<8 && i>IMG_HEIGHT+8 && j<8 && j>IMG_WIDTH+8){
+          sortie[j][i] = 0;
+        }
+        else{
           for(int m=0; m < kRows; ++m){     // kernel rows
               mm = kRows - 1 - m;      // row index of flipped kernel
               for(int n=0; n < kCols; ++n){ // kernel columns
@@ -96,6 +100,7 @@ void conv(int image[IMG_WIDTH][IMG_HEIGHT], int rows, int cols, int num_filtre, 
 
               }
           }
+        }
       }
   }
 }

@@ -3,17 +3,19 @@
 #include <math.h>
 #include "var.h"
 #include "conv.cpp"
+#include "ecriture.cpp"
 
 
 void creation_error(int image_floue[IMG_WIDTH][IMG_HEIGHT], int image_net[IMG_WIDTH][IMG_HEIGHT],
-                    int num_filtre, int rec_error_tab[IMG_WIDTH+16][IMG_HEIGHT+16]){//[IMG_WIDTH+16][IMG_HEIGHT+16]){
+                    int num_filtre, int rec_error_tab[IMG_WIDTH][IMG_HEIGHT]){//[IMG_WIDTH+16][IMG_HEIGHT+16]){
 
-  double result_conv[IMG_WIDTH+16][IMG_HEIGHT+16];
-  // double **result_conv = (double**)malloc(sizeof(*result_conv) * (IMG_WIDTH+16));
+  double result_conv[IMG_WIDTH][IMG_HEIGHT];
+  // double **result_conv = (double**)malloc(sizeof(*result_conv) * (IMG_WIDTH));
   //
-  // for (int i = 0; i < IMG_WIDTH+16; i++){
-  //   result_conv[i] = (double*)malloc(sizeof(**result_conv) * (IMG_HEIGHT+16));
+  // for (int i = 0; i < IMG_WIDTH; i++){
+  //   result_conv[i] = (double*)malloc(sizeof(**result_conv) * (IMG_HEIGHT));
   // }
+
   conv(image_net,IMG_HEIGHT,IMG_WIDTH,num_filtre,result_conv);
   std::cout << "conv done" << '\n';
   for(int i = 0 ; i < IMG_HEIGHT; i++){
@@ -21,36 +23,49 @@ void creation_error(int image_floue[IMG_WIDTH][IMG_HEIGHT], int image_net[IMG_WI
       if (i<8 && i>IMG_HEIGHT+8 && j<8 && j>IMG_WIDTH+8){
         rec_error_tab[j][i] = 0;
       }
-      rec_error_tab[j+8][i+8] = image_floue[j][i] - result_conv[j][i];
+      rec_error_tab[j][i] = image_floue[j][i] - (int)result_conv[j][i];
+      if (rec_error_tab[j][i]>255) {
+        rec_error_tab[j][i]=255;
+        }
+      if (rec_error_tab[j][i]<-255) {
+        rec_error_tab[j][i]=-255;
+        }
     }
   }
 }
 
-void reconstruction_error(int rec_error_tab[IMG_WIDTH+16][IMG_HEIGHT+16],int i, int j){
+void reconstruction_error(int rec_error_tab[IMG_WIDTH][IMG_HEIGHT],int i, int j){
   int rec_error = 0;
   for (int l = i - SIZE_WI; l < i + SIZE_WI; l++){
     for(int c = j - SIZE_WI; c < j + SIZE_WI; c++ ){
-      rec_error += pow(rec_error_tab[c][l],2);
+      rec_error += (int)pow((int)rec_error_tab[c][l],2);
     }
    }
-  rec_error_tab[j][i]=rec_error;
+  std::cout << "rec_error : " << rec_error << '\n';
+  if (rec_error>0){
+    rec_error_tab[j][i]=rec_error;
+  }
+  else {
+    rec_error_tab[j][i]=2147483647+rec_error;
+  }
+  std::cout << "rec_error_tab : " << rec_error_tab[j][i] << '\n';
 }
 
-void depth(int image_depht[IMG_WIDTH][IMG_HEIGHT],int rec_error_tab1[IMG_WIDTH+16][IMG_HEIGHT+16],\
-                            int rec_error_tab2[IMG_WIDTH+16][IMG_HEIGHT+16],\
-                            int rec_error_tab3[IMG_WIDTH+16][IMG_HEIGHT+16],\
-                            int rec_error_tab4[IMG_WIDTH+16][IMG_HEIGHT+16],\
-                            int rec_error_tab5[IMG_WIDTH+16][IMG_HEIGHT+16],\
-                            int rec_error_tab6[IMG_WIDTH+16][IMG_HEIGHT+16],\
-                            int rec_error_tab7[IMG_WIDTH+16][IMG_HEIGHT+16],\
-                            int rec_error_tab8[IMG_WIDTH+16][IMG_HEIGHT+16],\
-                            int rec_error_tab9[IMG_WIDTH+16][IMG_HEIGHT+16]
+void depth(int image_depht[IMG_WIDTH][IMG_HEIGHT],int rec_error_tab1[IMG_WIDTH][IMG_HEIGHT],\
+                            int rec_error_tab2[IMG_WIDTH][IMG_HEIGHT],\
+                            int rec_error_tab3[IMG_WIDTH][IMG_HEIGHT],\
+                            int rec_error_tab4[IMG_WIDTH][IMG_HEIGHT],\
+                            int rec_error_tab5[IMG_WIDTH][IMG_HEIGHT],\
+                            int rec_error_tab6[IMG_WIDTH][IMG_HEIGHT],\
+                            int rec_error_tab7[IMG_WIDTH][IMG_HEIGHT],\
+                            int rec_error_tab8[IMG_WIDTH][IMG_HEIGHT],\
+                            int rec_error_tab9[IMG_WIDTH][IMG_HEIGHT]
                           ){
 
   int tempo[9];
   int mini,mini_rank;
-  for (int i = 8; i < IMG_HEIGHT+8; i++) {
-    for (int j = 8; j < IMG_WIDTH+8; j++) {
+  for (int i = 0; i < IMG_HEIGHT; i++) {
+    for (int j = 0; j < IMG_WIDTH; j++) {
       tempo[0]= rec_error_tab1[j][i];
       tempo[1]= rec_error_tab2[j][i];
       tempo[2]= rec_error_tab3[j][i];
@@ -68,7 +83,6 @@ void depth(int image_depht[IMG_WIDTH][IMG_HEIGHT],int rec_error_tab1[IMG_WIDTH+1
           mini_rank = m;
           }
         }
-      std::cout << "mini_rank : " << mini_rank << '\n';
       image_depht[j][i]= mini_rank*((int)(255/9));
       if (image_depht[j][i]>255) {
         image_depht[j][i]=255;

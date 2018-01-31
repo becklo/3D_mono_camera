@@ -9,7 +9,6 @@
 #include <iostream>
 #include "Lecture.cpp"
 #include "depth.cpp"
-#include "ecriture.cpp"
 #include "var.h"
 
 int image_net[IMG_WIDTH][IMG_HEIGHT];
@@ -17,15 +16,15 @@ int image_floue[IMG_WIDTH][IMG_HEIGHT];
 
 int im_depth[IMG_WIDTH][IMG_HEIGHT];
 
-int rec_error_tab1[IMG_WIDTH+16][IMG_HEIGHT+16];
-int rec_error_tab2[IMG_WIDTH+16][IMG_HEIGHT+16];
-int rec_error_tab3[IMG_WIDTH+16][IMG_HEIGHT+16];
-int rec_error_tab4[IMG_WIDTH+16][IMG_HEIGHT+16];
-int rec_error_tab5[IMG_WIDTH+16][IMG_HEIGHT+16];
-int rec_error_tab6[IMG_WIDTH+16][IMG_HEIGHT+16];
-int rec_error_tab7[IMG_WIDTH+16][IMG_HEIGHT+16];
-int rec_error_tab8[IMG_WIDTH+16][IMG_HEIGHT+16];
-int rec_error_tab9[IMG_WIDTH+16][IMG_HEIGHT+16];
+int rec_error_tab1[IMG_WIDTH][IMG_HEIGHT];
+int rec_error_tab2[IMG_WIDTH][IMG_HEIGHT];
+int rec_error_tab3[IMG_WIDTH][IMG_HEIGHT];
+int rec_error_tab4[IMG_WIDTH][IMG_HEIGHT];
+int rec_error_tab5[IMG_WIDTH][IMG_HEIGHT];
+int rec_error_tab6[IMG_WIDTH][IMG_HEIGHT];
+int rec_error_tab7[IMG_WIDTH][IMG_HEIGHT];
+int rec_error_tab8[IMG_WIDTH][IMG_HEIGHT];
+int rec_error_tab9[IMG_WIDTH][IMG_HEIGHT];
 
 int main(){
 
@@ -33,7 +32,7 @@ int main(){
     lecture_image(image_floue,"image_floue_mini.pgm");
 
     // int **im_depth = (int**)malloc(sizeof(*im_depth) * (IMG_WIDTH));
-    // for (int i = 0; i < IMG_WIDTH+; i++){
+    // for (int i = 0; i < IMG_WIDTH; i++){
     //   im_depth[i] = (int*)malloc(sizeof(**im_depth) * (IMG_HEIGHT));
     // }
     //
@@ -74,15 +73,15 @@ int main(){
     for (int i = 0; i<IMG_HEIGHT;i++){
       for (int j = 0; j < IMG_WIDTH; j++) {
         if (i > (SIZE_WI) && i < IMG_HEIGHT - (SIZE_WI) && j > (SIZE_WI) && j < IMG_WIDTH -(SIZE_WI)){
-          reconstruction_error(rec_error_tab1,i+8,j+8);
-          reconstruction_error(rec_error_tab2,i+8,j+8);
-          reconstruction_error(rec_error_tab3,i+8,j+8);
-          reconstruction_error(rec_error_tab4,i+8,j+8);
-          reconstruction_error(rec_error_tab5,i+8,j+8);
-          reconstruction_error(rec_error_tab6,i+8,j+8);
-          reconstruction_error(rec_error_tab7,i+8,j+8);
-          reconstruction_error(rec_error_tab8,i+8,j+8);
-          reconstruction_error(rec_error_tab9,i+8,j+8);
+          reconstruction_error(rec_error_tab1,i,j);
+          reconstruction_error(rec_error_tab2,i,j);
+          reconstruction_error(rec_error_tab3,i,j);
+          reconstruction_error(rec_error_tab4,i,j);
+          reconstruction_error(rec_error_tab5,i,j);
+          reconstruction_error(rec_error_tab6,i,j);
+          reconstruction_error(rec_error_tab7,i,j);
+          reconstruction_error(rec_error_tab8,i,j);
+          reconstruction_error(rec_error_tab9,i,j);
         }
         else{
           rec_error_tab1[j][i] = 0;
@@ -97,6 +96,15 @@ int main(){
         }
       }
     }
+    ecriture_image_norm("recons_tab1.pgm",rec_error_tab1);
+    ecriture_image_norm("recons_tab2.pgm",rec_error_tab2);
+    ecriture_image_norm("recons_tab3.pgm",rec_error_tab3);
+    ecriture_image_norm("recons_tab4.pgm",rec_error_tab4);
+    ecriture_image_norm("recons_tab5.pgm",rec_error_tab5);
+    ecriture_image_norm("recons_tab6.pgm",rec_error_tab6);
+    ecriture_image_norm("recons_tab7.pgm",rec_error_tab7);
+    ecriture_image_norm("recons_tab8.pgm",rec_error_tab8);
+    ecriture_image_norm("recons_tab9.pgm",rec_error_tab9);
 
     //retour de la profondeur
     depth(im_depth,rec_error_tab1,rec_error_tab2,\
@@ -115,7 +123,7 @@ int main(){
     // std::cout << "Image net print" << '\n';
     // ecriture_image_norm("image_floue.pgm",image_floue);
     // std::cout << "Image floue print" << '\n';
-    ecriture_image_norm_mal("image_fin.pgm", im_depth);
+    ecriture_image_norm("image_fin.pgm", im_depth);
     std::cout << "Image fin print" << '\n';
 
 
