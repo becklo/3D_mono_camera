@@ -7,7 +7,7 @@
 
 void conv(int image[IMG_WIDTH][IMG_HEIGHT], int rows, int cols, int num_filtre, ac_fixed<32,10,true> sortie[IMG_WIDTH][IMG_HEIGHT]){//[IMG_WIDTH+16][IMG_HEIGHT+16]){
   int mm,nn,ii,jj,kCols,kRows;
-
+  // obligation de separer les cas en fonctions des filtres utilisés pour la convolution
   switch (num_filtre) {
     case 1:
       kCols = 17;

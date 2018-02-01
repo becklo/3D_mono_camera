@@ -11,6 +11,7 @@
 #define FILTER_NUM_9 (9*9)
 
 static ac_fixed<23,-6,true> coeffs_double_1[FILTER_NUM_1] = {
+//calcul pour la virgul fixe
 //min : -0.00579439 max : 0.0290279
 // [ I = -6, W = 23 ]
 	-0.000595583633156754,
@@ -305,6 +306,7 @@ static ac_fixed<23,-6,true> coeffs_double_1[FILTER_NUM_1] = {
 };
 
 static ac_fixed<24,-6,true> coeffs_double_2[FILTER_NUM_2] = {
+	//calcul pour la virgul fixe
 	//min : -0.00637668 max : 0.0330867
 	//[ I = -6, W = 24 ]
 	-0.000402667787574945,
@@ -534,6 +536,7 @@ static ac_fixed<24,-6,true> coeffs_double_2[FILTER_NUM_2] = {
 	0.00112570620653785,
 };
 static ac_fixed<24,-6,true> coeffs_double_3[FILTER_NUM_3] = {
+	//calcul pour la virgul fixe
 	//min : -0.00767655 max : 0.0392196
 	// [ I = -6, W = 24 ]
 	-0.000517052912424189,
@@ -764,6 +767,7 @@ static ac_fixed<24,-6,true> coeffs_double_3[FILTER_NUM_3] = {
 };
 
 static ac_fixed<24,-6,true> coeffs_double_4[FILTER_NUM_4] = {
+	//calcul pour la virgul fixe
 	//min : -0.00873683 max : 0.0566984
 	//[ I = -6, W = 24 ]
 	-0.000264156138510584,
@@ -938,6 +942,7 @@ static ac_fixed<24,-6,true> coeffs_double_4[FILTER_NUM_4] = {
 };
 
 static ac_fixed<25,-5,true> coeffs_double_5[FILTER_NUM_5] = {
+	//calcul pour la virgul fixe
 	//min : -0.0136043 max : 0.0742406
 	//[ I = -5, W = 25 ]
 	0.00186359318104378,
@@ -1113,6 +1118,7 @@ static ac_fixed<25,-5,true> coeffs_double_5[FILTER_NUM_5] = {
 };
 
 static ac_fixed<25,-5,true> coeffs_double_6[FILTER_NUM_6] = {
+	//calcul pour la virgul fixe
 //min : -0.0210215 max : 0.0841253
 // [ I = -5, W = 25 ]
 	-0.000622591689094989,
@@ -1239,6 +1245,7 @@ static ac_fixed<25,-5,true> coeffs_double_6[FILTER_NUM_6] = {
 
 };
 static ac_fixed<25,-5,true> coeffs_double_7[FILTER_NUM_7] = {
+	//calcul pour la virgul fixe
 //min : -0.018707 max : 0.124707
 //[ I = -5, W = 25 ]
 	-0.000224785225342198,
@@ -1324,6 +1331,7 @@ static ac_fixed<25,-5,true> coeffs_double_7[FILTER_NUM_7] = {
 	0.00201700328787515
 };
 static ac_fixed<25,-5,true> coeffs_double_8[FILTER_NUM_8] = {
+	//calcul pour la virgul fixe
 //min : -0.0139189 max : 0.155586
 //[ I = -5, W = 25 ]
 	-0.00291415209561497,
@@ -1409,6 +1417,7 @@ static ac_fixed<25,-5,true> coeffs_double_8[FILTER_NUM_8] = {
 	0.00114383694676340,
 };
 static ac_fixed<28,-2,true> coeffs_double_9[FILTER_NUM_9] = {
+	//calcul pour la virgul fixe
 //min : -0.102455 max : 0.586533
 //[ I = -2, W = 28 ]
 	0.000804810037222395,

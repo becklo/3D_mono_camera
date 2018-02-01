@@ -10,11 +10,14 @@
 #include "depth.cpp"
 #include "var.h"
 
+// buffer de données des images net et floue en entree
 int image_net[IMG_WIDTH][IMG_HEIGHT];
 int image_floue[IMG_WIDTH][IMG_HEIGHT];
 
+// buffer des valeurs des profondeur en sortie
 int im_depth[IMG_WIDTH][IMG_HEIGHT];
 
+// buffer pour calcul des erreurs pour recuperer les echelles
 int rec_error_tab1[IMG_WIDTH][IMG_HEIGHT];
 int rec_error_tab2[IMG_WIDTH][IMG_HEIGHT];
 int rec_error_tab3[IMG_WIDTH][IMG_HEIGHT];
@@ -40,30 +43,31 @@ int main(){
 	    //moyennage de l'erreur
 	    for (int i = 0; i<IMG_HEIGHT;i++){
 	      for (int j = 0; j < IMG_WIDTH; j++) {
-		if (i > (SIZE_WI) && i < IMG_HEIGHT - (SIZE_WI) && j > (SIZE_WI) && j < IMG_WIDTH -(SIZE_WI)){
-		  reconstruction_error(rec_error_tab1,i,j);
-		  reconstruction_error(rec_error_tab2,i,j);
-		  reconstruction_error(rec_error_tab3,i,j);
-		  reconstruction_error(rec_error_tab4,i,j);
-		  reconstruction_error(rec_error_tab5,i,j);
-		  reconstruction_error(rec_error_tab6,i,j);
-		  reconstruction_error(rec_error_tab7,i,j);
-		  reconstruction_error(rec_error_tab8,i,j);
-		  reconstruction_error(rec_error_tab9,i,j);
-		}
-		else{
-		  rec_error_tab1[j][i] = 0;
-		  rec_error_tab2[j][i] = 0;
-		  rec_error_tab3[j][i] = 0;
-		  rec_error_tab4[j][i] = 0;
-		  rec_error_tab5[j][i] = 0;
-		  rec_error_tab6[j][i] = 0;
-		  rec_error_tab7[j][i] = 0;
-		  rec_error_tab8[j][i] = 0;
-		  rec_error_tab9[j][i] = 0;
-		}
-	      }
-	    }
+						if (i > (SIZE_WI) && i < IMG_HEIGHT - (SIZE_WI) && j > (SIZE_WI) && j < IMG_WIDTH -(SIZE_WI)){
+						  reconstruction_error(rec_error_tab1,i,j);
+						  reconstruction_error(rec_error_tab2,i,j);
+						  reconstruction_error(rec_error_tab3,i,j);
+						  reconstruction_error(rec_error_tab4,i,j);
+						  reconstruction_error(rec_error_tab5,i,j);
+						  reconstruction_error(rec_error_tab6,i,j);
+						  reconstruction_error(rec_error_tab7,i,j);
+						  reconstruction_error(rec_error_tab8,i,j);
+						  reconstruction_error(rec_error_tab9,i,j);
+						}
+						else{
+							// on evite les effets de bord en mettant a 0 les contours
+						  rec_error_tab1[j][i] = 0;
+						  rec_error_tab2[j][i] = 0;
+						  rec_error_tab3[j][i] = 0;
+						  rec_error_tab4[j][i] = 0;
+						  rec_error_tab5[j][i] = 0;
+						  rec_error_tab6[j][i] = 0;
+						  rec_error_tab7[j][i] = 0;
+						  rec_error_tab8[j][i] = 0;
+						  rec_error_tab9[j][i] = 0;
+						}
+	      	}
+	    	}
 
 	    //retour de la profondeur
 	    depth(im_depth,rec_error_tab1,rec_error_tab2,\
@@ -75,6 +79,5 @@ int main(){
 	      rec_error_tab8,\
 	      rec_error_tab9
 	    );
-
 
 }
