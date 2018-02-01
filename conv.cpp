@@ -5,7 +5,7 @@
 #include "var.h"
 #include "coef_filtre.h"
 
-void conv(int image[IMG_WIDTH][IMG_HEIGHT], int rows, int cols, int num_filtre, double sortie[IMG_WIDTH][IMG_HEIGHT]){//[IMG_WIDTH+16][IMG_HEIGHT+16]){
+void conv(int image[IMG_WIDTH][IMG_HEIGHT], int rows, int cols, int num_filtre, double **sortie){//[IMG_WIDTH+16][IMG_HEIGHT+16]){
   int mm,nn,ii,jj,kCols,kRows;
 
   switch (num_filtre) {
@@ -70,30 +70,39 @@ void conv(int image[IMG_WIDTH][IMG_HEIGHT], int rows, int cols, int num_filtre, 
                     switch (num_filtre) {
                       case 1 :
                         sortie[j][i] += image[jj][ii] * coeffs_double_1[17*nn+mm];
+
                         break;
                       case  2 :
                         sortie[j][i] += image[jj][ii] * coeffs_double_2[15*nn+mm];
+
                         break;
                       case  3 :
                         sortie[j][i] += image[jj][ii] * coeffs_double_3[15*nn+mm];
+
                         break;
                       case  4 :
                         sortie[j][i] += image[jj][ii] * coeffs_double_4[13*nn+mm];
+
                         break;
                       case 5:
                         sortie[j][i] += image[jj][ii] * coeffs_double_5[13*nn+mm];
+
                         break;
                       case 6:
                         sortie[j][i] += image[jj][ii] * coeffs_double_6[11*nn+mm];
+
                         break;
                       case 7:
                         sortie[j][i] += image[jj][ii] * coeffs_double_7[9*nn+mm];
+
                         break;
                       case 8:
                         sortie[j][i] += image[jj][ii] * coeffs_double_8[9*nn+mm];
+
                         break;
                       case 9:
                         sortie[j][i] += image[jj][ii] * coeffs_double_9[9*nn+mm];
+
                         break;
                     }
                   }
